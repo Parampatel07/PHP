@@ -17,6 +17,16 @@
           <span class="text">Dashboard</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a href="advertisment.php" class="collapsed">
+          <span class="text">Advertisment</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="advertiser.php" class="collapsed">
+          <span class="text">Customer Management</span>
+        </a>
+      </li>
       <li class="nav-item ">
         <a href="catagory.php" class="collapsed">
           <span class="text">Category Management</span>
@@ -30,11 +40,6 @@
       <li class="nav-item ">
         <a href="operators.php" class="collapsed">
           <span class="text">Operator Management</span>
-        </a>
-      </li>
-      <li class="nav-item ">
-        <a href="advertiser.php" class="collapsed">
-          <span class="text">Customer Management</span>
         </a>
       </li>
     </ul>

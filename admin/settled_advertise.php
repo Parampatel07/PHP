@@ -17,11 +17,11 @@
                     </div>
                     <div class="card mt-4 shadow p-5">
                         <div class="float-start">
-                            <h3>Param Patel (007) - Due Payment</h3>
+                            <h3>Param Patel (007) - Settled Advetise (Payment)</h3> 
 
                         </div>
                         <div>
-                            <a class="btn btn-success btn-sm float-end" href="settled_advertise.php">Settled Payment(Paid)</a>
+                            <a class="btn btn-success btn-sm float-end" href="">Due Payment(Pending)</a>
                         </div>
                         <hr>
                         <div class="table-responsive">
