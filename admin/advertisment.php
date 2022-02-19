@@ -16,9 +16,33 @@
                         <h2>Advertisment Management</h2>
                     </div>
                     <div class="card mt-4 shadow p-5">
+                        <form action="" method="post">
+                            <div class="row ">
+                                <div class="col-6 mt-4"><h3>Select date to Filter</h3></div>
+                                <div class="col-md-2">
+                                    <div class="">
+                                        <label for="startdate" class="form-label">Select start date</label>
+                                        <input type="date" class="form-control" name="startdate" id="startdate"
+                                            placeholder="Select start date" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="">
+                                        <label for="startdate" class="form-label">Select start date</label>
+                                        <input type="date" class="form-control" name="startdate" id="startdate"
+                                            placeholder="Select start date" />
+                                    </div>
+                                </div>
+                                <div class="col-2 mt-4">
+                                    <div class="mb-4 input-style-1 float-end">
+                                        <button type="submit" class="btn btn-info">Apply Filter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
                         <div class="float-start">
                             <h3>Tomorrow's Advertisment</h3>
-
                         </div>
                         <hr>
                         <div class="table-responsive">

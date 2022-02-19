@@ -17,35 +17,13 @@
           <span class="text">Dashboard</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a href="advertisment.php" class="collapsed">
-          <span class="text">Advertisment</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="advertiser.php" class="collapsed">
-          <span class="text">Customer Management</span>
-        </a>
-      </li><li class="nav-item">
-        <a href="feedback.php" class="collapsed">
-          <span class="text">Customer Feedback</span>
-        </a>
-      </li>
       <li class="nav-item ">
-        <a href="catagory.php" class="collapsed">
-          <span class="text">Category Management</span>
+        <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_1" aria-controls="ddmenu_1" aria-expanded="false" aria-label="Toggle navigation">
+          </span>
+          <span class="text">Advertisment </span>
         </a>
       </li>
-      <li class="nav-item ">
-        <a href="design_template.php" class="collapsed">
-          <span class="text">Template Management</span>
-        </a>
-      </li>
-      <li class="nav-item ">
-        <a href="operators.php" class="collapsed">
-          <span class="text">Operator Management</span>
-        </a>
-      </li>
+     
     </ul>
   </nav>
 

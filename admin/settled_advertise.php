@@ -21,7 +21,7 @@
 
                         </div>
                         <div>
-                            <a class="btn btn-success btn-sm float-end" href="">Due Payment(Pending)</a>
+                            <a class="btn btn-success btn-sm float-end" href="booked_advertise.php">Due Payment(Pending)</a>
                         </div>
                         <hr>
                         <div class="table-responsive">
