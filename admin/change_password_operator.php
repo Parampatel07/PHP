@@ -1,14 +1,10 @@
 <?php require_once("include/header.php") ?>
-
 </head>
-
 <body>
   <?php require_once("include/operator_sidebar.php") ?>
-
   <!-- ======== main-wrapper start =========== -->
   <?php require_once("include/wrapper.php") ?>
   <!-- ========== section end ========== -->
-
   <div class="container-fluid">
     <!-- ========== title-wrapper start ========== -->
     <div class="title-wrapper pt-30">
@@ -45,8 +41,6 @@
   </div>
   </main>
   <!-- ======== main-wrapper end =========== -->
-
   <?php require_once("include/script.php") ?>
 </body>
-
 </html>
