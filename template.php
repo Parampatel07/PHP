@@ -12,8 +12,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
-                        <div class="text-center mb-4">
-                            <h2 class="heading">Template Features</h2>
+                        <div class=" mb-4">
+                            <h2 class="heading text-center">Template Features</h2>
                             <p class="text-muted fs-17">Ut enim ad minima veniam quis nostrum exercitationem ullam 
                                 corporis suscipit laboriosam nisi commodi consequatur.</p>
                         </div>

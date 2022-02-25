@@ -14,25 +14,20 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center mb-4">
-                            <h2 class="heading">Login </h2>
+                            <h2 class="heading">Forgot password </h2>
                             <div class="text-muted fs-17">
                                 <div class="card">
                                     <div class="card-body text-left">
                                         <form action="" method="post">
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">Email adress</label>
-                                            <input type="email" class="form-control" id="eamil" name="email"
-                                                placeholder="Email adress goes here">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="password" class="form-label">Password</label>
-                                            <input type="password" class="form-control" id="password" name="password"
-                                                placeholder="Password goes here">
-                                        </div>
-                                        <div class="mb-3 mt-4  text-end">
-                                        <input type="submit" value="Login" class="btn btn-primary">
-                                        <button type="Reset" class="btn btn-primary">Reset</button>
-                                        </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email adress</label>
+                                                <input type="email" class="form-control" id="eamil" name="email"
+                                                    placeholder="Email adress goes here">
+                                            </div>
+                                            <div class="mb-3 mt-4  text-end">
+                                                <input type="submit" value="Recover account" class="btn btn-primary">
+                                                <a href="login.php" class="btn btn-primary">Click to login</a>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
