@@ -5,7 +5,7 @@ require_once("../inc/function.php");
 require_once("../../vendor/autoload.php");
 
 use Rakit\Validation\Validator;
-
+    
 $validator = new Validator;
 
 $validation = $validator->make($_POST, [
@@ -18,7 +18,13 @@ if ($validation->fails()) {
     // handling errors
     $errors = $validation->errors();
     $_SESSION['errors']=serialize(($errors->firstOfAll()));
-    header("Location:../input_novalidate.php");
+
+     //USing library method to get the valid data 
+     $validData = $validation->getValidData();
+     $_SESSION['inputs'] = serialize($validData);
+     
+     //Transfer user to another page
+    header("Location:../input_novalidate_adv.php");
     exit;
 } else {
     // validation passes

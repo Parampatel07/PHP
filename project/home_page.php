@@ -109,7 +109,7 @@
                                     corrupti in soluta similique nihil cupiditate provident, obcaecati incidunt
                                     perspiciatis, alias libero odio illo?</p>
                                 <div class="mt-3 text-center">
-                                    <a href="catageory.php" class="btn btn-primary btn-block">View more details</a>
+                                    <a href="advertise_template.php" class="btn btn-primary btn-block">View more details</a>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                                     corrupti in soluta similique nihil cupiditate provident, obcaecati incidunt
                                     perspiciatis, alias libero odio illo?</p>
                                 <div class="mt-3 text-center">
-                                    <a href="catageory.php" class="btn btn-primary btn-block">View more details</a>
+                                    <a href="advertise_template.php" class="btn btn-primary btn-block">View more details</a>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                                     corrupti in soluta similique nihil cupiditate provident, obcaecati incidunt
                                     perspiciatis, alias libero odio illo?</p>
                                 <div class="mt-3 text-center">
-                                    <a href="catageory.php" class="btn btn-primary btn-block">View more details</a>
+                                    <a href="advertise_template.php" class="btn btn-primary btn-block">View more details</a>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +244,7 @@
                                     corrupti in soluta similique nihil cupiditate provident, obcaecati incidunt
                                     perspiciatis, alias libero odio illo?</p>
                                 <div class="mt-3 text-center">
-                                    <a href="catageory.php" class="btn btn-primary btn-block">View more details</a>
+                                    <a href="advertise_template.php" class="btn btn-primary btn-block">View more details</a>
                                 </div>
                             </div>
                         </div>

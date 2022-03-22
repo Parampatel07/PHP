@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b3d3a85bfc6a178bfa19afb5a40ce2be2aa6e2ba',
+        'reference' => '3ed54ad119fee823ecca8039275a4c01122b3d60',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b3d3a85bfc6a178bfa19afb5a40ce2be2aa6e2ba',
+            'reference' => '3ed54ad119fee823ecca8039275a4c01122b3d60',
             'dev_requirement' => false,
         ),
         'rakit/validation' => array(
