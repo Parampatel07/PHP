@@ -39,5 +39,5 @@ sort($number,SORT_NUMERIC);
 displayarray($number);
 sort($name,SORT_STRING);
 displayarray($name);
-echo "size of number ".sizeof($number);
+echo "size of number".sizeof($number);
 ?>
