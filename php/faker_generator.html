@@ -23,23 +23,25 @@
                 <div class="card shadow">
                     <div class="card-header bg-success text-light"><h2>Fake data generator</h2></div>
                     <div class="card-body">
+                        <form action="../php/faker_lib.php" method="post">
                         <div class="mb-3">
                             <label for="names" class="form-label">Enter no. of fake names</label>
                             <input type="number" class="form-control" name="names" id="names">
                         </div>
                         <div class="mb-3">
-                            <label for="names" class="form-label">Enter no. of fake Phone number</label>
-                            <input type="number" class="form-control" name="names" id="names">
+                            <label for="phones" class="form-label">Enter no. of fake Phone number</label>
+                            <input type="number" class="form-control" name="phones" id="phones">
                         </div>
                         <div class="mb-3">
-                            <label for="names" class="form-label">Enter no. of fake Email address</label>
-                            <input type="number" class="form-control" name="names" id="names">
+                            <label for="eamils" class="form-label">Enter no. of fake Email address</label>
+                            <input type="number" class="form-control" name="emails" id="emails">
                         </div>
                         <div class="mb-3">
                             <button class="btn btn-success float-end" action="submit" required>
                                 Generate Data
                             </button>
                         </div>
+                    </form>
                     </div>
                 </div>
             </div>
