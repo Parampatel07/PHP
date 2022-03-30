@@ -18,16 +18,16 @@
                             <a class="nav-link active" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
+                            <a class="nav-link" href="#catageory">Catageories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#review">Review</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#pricing">Pricing</a>
+                            <a class="nav-link" href="#features">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mb-3 mb-lg-0" href="#contact">Contact</a>
+                            <a class="nav-link mb-3 mb-lg-0" href="#footer">Contact Us</a>
                         </li>
                     </ul>
                     <!-- Button trigger modal -->

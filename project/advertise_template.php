@@ -80,7 +80,7 @@
                         <div class="team-card">
                             <div class="team-card-img">
                                 <img class="img-fluid"
-                                    src="project2\themesdesign.in\oxhen\layouts/images/user/user2.png" alt="image">
+                                    src="https://picsum.photos/261" alt="image">
                                 <div class="team-social-icons">
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
@@ -121,7 +121,7 @@
                         <div class="team-card">
                             <div class="team-card-img">
                                 <img class="img-fluid"
-                                    src="https://picsum.photos/262" alt="image">
+                                    src="https://picsum.photos/261" alt="image">
                                 <div class="team-social-icons">
                                     <ul class="list-inline">
                                         <li class="list-inline-item">

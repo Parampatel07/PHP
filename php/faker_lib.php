@@ -4,14 +4,18 @@ require_once '../../php/vendor/autoload.php';
 $names = $_POST['names'];
 $phones = $_POST['phones'];
 $emails = $_POST['emails'];
-// use the factory to create a Faker\Generator instance
+// use the factory to create a Faker\Generator instance\
+
 $faker = Faker\Factory::create();
 // generate data by accessing properties  
 ?>
  <div class="container mt-5">
         <div class="row mt-5">
             <div class="col-4">
-                <div class="card">
+              <?php
+              if($names != '' && $names != 0)
+              { ?>
+                     <div class="card">
                     <div class="card-header bg-success text-light">
                         <h2>NAMES..</h2>
                     </div>
@@ -22,9 +26,15 @@ $faker = Faker\Factory::create();
                         }
                         ?>
                     </div>
-                </div>
+                </div>                
+             <?php }
+              ?>
+               
             </div>
             <div class="col-4">
+            <?php
+              if($phones != '' && $phones != 0)
+              { ?>
                 <div class="card">
                     <div class="card-header bg-success text-light">
                         <h2>Phone numbers..</h2>
@@ -37,22 +47,28 @@ $faker = Faker\Factory::create();
                         ?>
                     </div>
                 </div>
+                <?php }
+              ?>
             </div>
             <div class="col-4">
+            <?php
+              if($emails != '' && $emails != 0)
+              { ?>
                 <div class="card">
                     <div class="card-header bg-success text-light">
                         <h2>Email address..</h2>
                     </div>
                     <div class="card-body">
                         <?php
-                    
-for($k=0; $k < $emails; $k++)
-{
-    echo $faker->email,"<br>";
-}                                
+                            for($k=0; $k < $emails; $k++)
+                            {
+                                echo $faker->email,"<br>";
+                            }                                
                         ?>
                     </div>
                 </div>
+                <?php }
+                ?>
             </div>
         </div>  
     </div>

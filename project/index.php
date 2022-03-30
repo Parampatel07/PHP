@@ -22,8 +22,8 @@
                         <p class=" fs-20">Grow your Business with our Network</p>
                         <div class="home-btn hstack gap-2 flex-column d-sm-block">
                             <a class="btn btn-white me-1"
-                                href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)">Request Free Demo</a>
-                            <a class="modal-btn" href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
+                                href="#features">Request Free Demo</a>
+                            <a class="modal-btn" href="#features"
                                 data-bs-toggle="modal" data-bs-target=".watchvideomodal">
                                 <span class="avatar-sm">
                                     <span class="avatar-title rounded-circle btn-icon">
@@ -62,7 +62,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="text-center mb-5">
-                            <h2 class="heading">Select Catageory</h2>
+                            <h2 class="heading mt-4" id="catageory">Select Catageory</h2>
                             <p class="text-muted fs-17">Select a suitable catageory for your add from multiple option of
                                 your choice</p>
                         </div>
