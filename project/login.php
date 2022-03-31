@@ -31,7 +31,6 @@
                                         </div>
                                         <div class="mb-3 mt-4  text-end">
                                         <input type="submit" value="Login" class="btn btn-primary">
-                                        <button type="Reset" class="btn btn-primary">Reset</button>
                                         </div>
                                         </form>
                                     </div>

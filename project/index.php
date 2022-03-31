@@ -15,7 +15,7 @@
                         <div class="home-heading">
                             <h1 class="mb-3 ">Instantly Book Ads Online With Us<span
                                     class="typewrite text-primary d-none d-sm-inline-block" data-period="2000"
-                                    data-type='[ " HillTop" ]'>
+                                    data-type='[ " Vegeta " ]'>
                                     <span class="wrap"></span> </span>
                             </h1>
                         </div>

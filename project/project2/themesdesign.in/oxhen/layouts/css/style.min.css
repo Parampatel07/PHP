@@ -5,7 +5,7 @@ h1,h2,h3,h4,h5,h6{font-family:"Montserrat",sans-serif;font-weight:500;line-heigh
 .home{background-position:center;background-size:cover;padding:200px 0}
 
 .home .home-heading h1{font-size:45px;font-weight:600;line-height:1.4}.home .home-btn{margin-top:30px}.home .home-btn .modal-btn{position:relative;padding:13px 52px 13px 30px}.home .home-btn .modal-btn span{position:absolute;align-items:center;justify-content:center}.home .home-btn .modal-btn span i{font-size:34px}.home .home-btn .modal-btn:hover .btn-icon,.home .home-btn .modal-btn:focus .btn-icon{background-color:#fff;color:#00776d;transition:all .9s ease}.home .home-modal{border:0;background-color:transparent}.home .home-modal .btn-close{width:24px;height:24px;background-color:rgba(21,44,92,.5);border-radius:4px;position:relative;top:60px;right:3px;z-index:3}.home .home-modal .btn-close:hover,.home .home-modal .btn-close:focus{opacity:.5}.home .home-modal video:focus{outline:none}
-.home-1{background-image:url(../images/slider5.png)}
+.home-1{background-image:url(../images/slider10.png)}
 
 .home-1 .bg-overlay{background:linear-gradient(131deg, #ccd3ee, transparent)}
 .home-2{background-image:url("../images/home-2.jpg")}

@@ -1,10 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-custom sticky" id="navbar" role="navigation">
             <div class="container">
                 <!-- LOGO -->
-                <a class="navbar-brand text-uppercase" href="index-1.html">
-                    <img class="logo-light" src="project2\themesdesign.in\oxhen\layouts/images/logo-light.png" alt="" height="25">
-                    <img class="logo-dark" src="project2\themesdesign.in\oxhen\layouts/images/logo-dark.png" alt="" height="25">
-                </a>
+                
 
                 <button id="navbar-example" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
