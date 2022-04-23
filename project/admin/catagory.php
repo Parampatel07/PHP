@@ -19,7 +19,7 @@
                         <h3>Add new Category</h3>
                         <hr>
                         <div class="row mt-3">
-                            <form action="" method="post">
+                            <form action="submit/insert_category.php" enctype="multipart/form-data" method="post" >
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-style-1 ">
@@ -48,7 +48,7 @@
                                             <label class="form-check-label" for="website">
                                                 Website/Application
                                             </label>
-                                        </div>
+                                        </div>  
                                     </div>
                                     <div class="col-md-4">
                                         <legend class="col-form-label col-sm-12 pt-0">Select type of Advertisement </legend>
@@ -78,7 +78,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row"    >
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="adsize">Ad size</label>
