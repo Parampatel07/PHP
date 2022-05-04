@@ -17,6 +17,9 @@
                     </div>
                     <div class="card mt-3 shadow p-4">
                         <h3>Add new Category</h3>
+                        <?php
+                        if($)
+                        ?>
                         <hr>
                         <div class="row mt-3">
                             <form action="submit/insert_category.php" enctype="multipart/form-data" method="post" >

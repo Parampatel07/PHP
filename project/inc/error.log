@@ -1,0 +1,9 @@
+
+ Error Code2002 ErrorDetail No connection could be made because the target machine actively refused it.
+ on occured at Wed04-05-202201:47:52PM in file connection.php at lineno 0
+ Error Code2002 ErrorDetail No connection could be made because the target machine actively refused it.
+ on occured at Wed04-05-202201:48:51PM in file connection.php at lineno 0
+ Error Code2002 ErrorDetail No connection could be made because the target machine actively refused it.
+ on occured at Wed04-05-202201:50:06PM in file connection.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inster into category (ctitle,description,adtype,subadtype,pageno,adsize,rate,sam' at line 1 on occured at Wed04-05-202201:50:56PM in file E:\wamp64\www\php\project\admin\submit\insert_category.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inster into category (ctitle,description,adtype,subadtype,pageno,adsize,rate,sam' at line 1 on occured at Wed04-05-202201:54:42PM in file E:\wamp64\www\php\project\admin\submit\insert_category.php at lineno 0

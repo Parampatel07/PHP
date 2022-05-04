@@ -1,11 +1,12 @@
 <?php
+session_start();
 date_default_timezone_set("asia/kolkata");
-define("FILENAME",$_SERVER['DOCUMENT_ROOT']."/php_b19/project/inc/error.log");
-define("ISDEBUG",false);
-define("SERVER","localhost:3308");
+define("FILENAME",$_SERVER['DOCUMENT_ROOT']."/php/project/inc/error.log");
+define("ISDEBUG",true);
+define("SERVER","localhost:3306");
 define("USERNAME","root");
 define("PASSWORD","");
-define("DATABASE","php_b19");
+define("DATABASE","advertise_booking");
 //used to store errors in error.log file of project/inc directory and also display error on screen if project is in developement stage 
 function LogError(PDOException $error,$FileName='connection.php',$line=0) //user defined functions
 {
@@ -15,10 +16,10 @@ function LogError(PDOException $error,$FileName='connection.php',$line=0) //user
     //it writes content into file
     file_put_contents(FILENAME,$ErrorMessage,FILE_APPEND|LOCK_EX);
     if(ISDEBUG==true)
-        echo $ErrorMessage;
+        $_SESSION['error'] =  $ErrorMessage;
     else
-        echo "oops, something went wrong, we are trying to find out the problem. please come after sometime";
-    
+       $ErrorMessage = "oops, something went wrong, we are trying to find out the problem. please come after sometime";
+       $_SESSION['error'] = $ErrorMessage;
     exit();//terminate php script
 }
 $db=null; //object
