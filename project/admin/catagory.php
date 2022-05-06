@@ -179,7 +179,7 @@ require_once("../inc/connection.php");
                                         <td style="background-color:<?php $color ?>"><?php echo $count++; ?></td>
                                         <td style="background-color:<?php $color ?>"><?php echo $row['ctitle']; ?>
                                         <br>
-                                        <a href="delete_catagory.php?categoryid=<?php echo $row['id'];?>&image=<?php echo $row['sampleimage'];?>" class="btn btn-danger">
+                                        <a href="delete_catagory.php?categoryid=<?php echo $row['id'];?>& image=<?php echo $row['sampleimage'];?>" class="btn btn-danger">
                                         <i class="lni lni-trash-can"></i>
                                         </a>
                                         &nbsp;&nbsp;
