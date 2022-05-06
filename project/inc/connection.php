@@ -1,5 +1,4 @@
 <?php
-session_start();
 date_default_timezone_set("asia/kolkata");
 define("FILENAME",$_SERVER['DOCUMENT_ROOT']."/php/project/inc/error.log");
 define("ISDEBUG",true);
@@ -18,9 +17,9 @@ function LogError(PDOException $error,$FileName='connection.php',$line=0) //user
     if(ISDEBUG==true)
         $_SESSION['error'] =  $ErrorMessage;
     else
-       $ErrorMessage = "oops, something went wrong, we are trying to find out the problem. please come after sometime";
+       $ErrorMessage = "Oops, Something went wrong. Please contact adminstrator";
        $_SESSION['error'] = $ErrorMessage;
-    exit();//terminate php script
+    // exit();//terminate php script
 }
 $db=null; //object
 try

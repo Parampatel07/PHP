@@ -1,4 +1,13 @@
-<?php require_once("include/header.php") ?>
+<?php
+session_start();
+require_once("include/header.php") ;
+require_once("../inc/connection.php");
+?>
+<style>
+.table_str {
+    background-color: #F9F9F9 !important;
+}
+</style>
 </head>
 
 <body>
@@ -17,12 +26,12 @@
                     </div>
                     <div class="card mt-3 shadow p-4">
                         <h3>Add new Category</h3>
-                        <?php
-                        if($)
-                        ?>
                         <hr>
+                        <?php
+                        require("../admin/include/message.php");
+                        ?>
                         <div class="row mt-3">
-                            <form action="submit/insert_category.php" enctype="multipart/form-data" method="post" >
+                            <form action="submit/insert_category.php" enctype="multipart/form-data" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-style-1 ">
@@ -41,34 +50,40 @@
                                     <div class="col-md-4">
                                         <legend class="col-form-label col-sm-12 pt-0">Select Advertise type</legend>
                                         <div class="form-check">
-                                            <input required class="form-check-input" type="radio" name="adtype" id="news" value="1" checked>
+                                            <input required class="form-check-input" type="radio" name="adtype"
+                                                id="news" value="1" checked>
                                             <label class="form-check-label" for="news">
                                                 News Paper
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input required class="form-check-input" type="radio" name="adtype" id="website" value="1">
+                                            <input required class="form-check-input" type="radio" name="adtype"
+                                                id="website" value="1">
                                             <label class="form-check-label" for="website">
                                                 Website/Application
                                             </label>
-                                        </div>  
+                                        </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <legend class="col-form-label col-sm-12 pt-0">Select type of Advertisement </legend>
+                                        <legend class="col-form-label col-sm-12 pt-0">Select type of Advertisement
+                                        </legend>
                                         <div class="form-check">
-                                            <input required class="form-check-input" type="radio" name="rdo" id="Standard" value="2" checked>
+                                            <input required class="form-check-input" type="radio" name="rdo"
+                                                id="Standard" value="2" checked>
                                             <label class="form-check-label" for="Standard">
                                                 Standard(black and white)
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input required class="form-check-input" type="radio" name="rdo" id="Classified" value="2">
+                                            <input required class="form-check-input" type="radio" name="rdo"
+                                                id="Classified" value="2">
                                             <label class="form-check-label" for="Classified">
                                                 Classified(mutlicolor)
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input required class="form-check-input" type="radio" name="rdo" id="Animation" value="2">
+                                            <input required class="form-check-input" type="radio" name="rdo"
+                                                id="Animation" value="2">
                                             <label class="form-check-label" for="Animation">
                                                 Animation
                                             </label>
@@ -77,21 +92,23 @@
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="pageno">Enter Page no.</label>
-                                            <input type="text" name="pageno" id="pageno" placeholder="Enter page number" />
+                                            <input type="number" name="pageno" id="pageno"
+                                                placeholder="Enter page number" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row"    >
+                                <div class="row">
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="adsize">Ad size</label>
-                                            <input type="text" name="adsize" id="adsize" placeholder="Enter AD size" />
+                                            <input type="number" name="adsize" id="adsize"
+                                                placeholder="Enter AD size" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="rate">Rate</label>
-                                            <input type="text" name="rate" id="rate" placeholder="Enter Rate" />
+                                            <input type="number" name="rate" id="rate" placeholder="Enter Rate" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -116,37 +133,74 @@
                         <h3>Existing Categories</h3>
                         <hr>
                         <div class="table-responsive">
-                            <table class="table table-striped display mt-4 mb-4" id="example">
-                            <thead>
-                                <tr>
-                                    <td>#</td>
-                                    <td>Title</td>
-                                    <td>File</td>
-                                    <td>Rate</td>
-                                    <td>Ad type</td>
-                                    <td>Type of Advertise</td>
-                                    <td>Page no.</td>
-                                    <td>Size</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td> 1</td>
-                                    <td>First ad <i class="lni lni-trash-can"></i>&nbsp;&nbsp;<i class="lni lni-slice"></i></td>
-                                    <td><img src="https://picsum.photos/50" alt=""></td>
-                                    <td>200</td>
-                                    <td>Newspaper</td>
-                                    <td>Black White</td>
-                                    <td>10</td>
-                                    <td>10*12</td>
-                                </tr>
-                            </tbody>
+                            <table class="table mt-4 mb-4" id="example">
+                                <thead>
+                                    <tr>
+                                        <th>sr no.</th>
+                                        <th>Title</th>
+                                        <th>File</th>
+                                        <th>Rate</th>
+                                        <th>Ad type</th>
+                                        <th>Type of Advertise</th>
+                                        <th>Page no.</th>
+                                        <th>Size</th>
+                                    </tr>
+                                </thead>
+                                <?php
+                                $sql = "SELECT * from category order by id desc";
+                                try
+                                {
+                                    $statement=$db->prepare($sql);
+                                    $statement->setFetchMode(PDO::FETCH_ASSOC);
+                                    $statement->execute();
+                                    $table=$statement->fetchall();
+                                }
+                                catch(PDOException $error)
+                                {
+                                    LogError($error,__FILE__);
+                                }
+                                require("../admin/include/message.php");
+                                if(isset($table)==true)
+                                {   $count=1;
+                                    foreach($table as $row)
+                                    {
+                                        if($count%2==0)
+                                        {
+                                            $color = "#FFFFFF";
+                                        }
+                                        else
+                                        {
+                                            $color= "#F9F9F9";
+                                        }
+                                ?>
+                                <tbody>
+                                    <tr style="background-color:<?php echo $color?>">
+                                        <td style="background-color:<?php $color ?>"><?php echo $count++; ?></td>
+                                        <td style="background-color:<?php $color ?>"><?php echo $row['ctitle']; ?><i
+                                                class="lni lni-trash-can"></i>&nbsp;&nbsp;<i class="lni lni-slice"><i>
+                                        </td>
+                                        <td style="background-color:<?php $color ?>"><img
+                                                src="../images/category/<?php echo $row['sampleimage']; ?>"
+                                                width="100px" alt="">
+                                            <br><br>
+                                        </td>
+                                        <td style="background-color:<?php $color ?>"><?php echo $row['rate']; ?></td>
+                                        <td style="background-color:<?php $color ?>"><?php echo $row['adtype']; ?></td>
+                                        <td style="background-color:<?php $color ?>"><?php echo $row['subadtype']; ?>
+                                        </td>
+                                        <td style="background-color:<?php $color ?>"><?php echo $row['pageno'];?></td>
+                                        <td style="background-color:<?php $color ?>"><?php echo $row['adsize']; ?></td>
+                                    </tr>
+                                </tbody>
+                                <?php
+                                    }
+                                }
+                               ?>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!-- ======== main-wrapper end =========== -->
