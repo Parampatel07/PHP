@@ -146,6 +146,7 @@ require_once("../inc/connection.php");
                                         <th>Size</th>
                                     </tr>
                                 </thead>
+                                <tbody>
                                 <?php
                                 $sql = "SELECT * from category order by id desc";
                                 try
@@ -173,11 +174,18 @@ require_once("../inc/connection.php");
                                             $color= "#F9F9F9";
                                         }
                                 ?>
-                                <tbody>
+                                
                                     <tr style="background-color:<?php echo $color?>">
                                         <td style="background-color:<?php $color ?>"><?php echo $count++; ?></td>
-                                        <td style="background-color:<?php $color ?>"><?php echo $row['ctitle']; ?><i
-                                                class="lni lni-trash-can"></i>&nbsp;&nbsp;<i class="lni lni-slice"><i>
+                                        <td style="background-color:<?php $color ?>"><?php echo $row['ctitle']; ?>
+                                        <br>
+                                        <a href="delete_catagory.php?categoryid=<?php echo $row['id'];?>&image=<?php echo $row['sampleimage'];?>" class="btn btn-danger">
+                                        <i class="lni lni-trash-can"></i>
+                                        </a>
+                                        &nbsp;&nbsp;
+                                        <a href="" class="btn btn-success">
+                                        <i class="lni lni-slice"></i>
+                                        </a>
                                         </td>
                                         <td style="background-color:<?php $color ?>"><img
                                                 src="../images/category/<?php echo $row['sampleimage']; ?>"
@@ -185,15 +193,38 @@ require_once("../inc/connection.php");
                                             <br><br>
                                         </td>
                                         <td style="background-color:<?php $color ?>"><?php echo $row['rate']; ?></td>
-                                        <td style="background-color:<?php $color ?>"><?php echo $row['adtype']; ?></td>
-                                        <td style="background-color:<?php $color ?>"><?php echo $row['subadtype']; ?>
+                                        <td style="background-color:<?php $color ?>"><?php 
+                                        if($row['adtype']=='1')
+                                        {
+                                            echo "Newspaper";
+                                        }
+                                        else
+                                        {
+                                            echo "Website";
+                                        }
+                                        ?></td>
+                                        <td style="background-color:<?php $color ?>"><?php 
+                                        if($row['subadtype']=='1')
+                                        {
+                                            echo "Text only";
+                                        }
+                                        else if($row['subadtype']=='2')
+                                        {
+                                            echo "Classified";
+                                        }
+                                        else
+                                        {
+                                            echo "Dispaly";
+                                        }
+                                        ?>
                                         </td>
                                         <td style="background-color:<?php $color ?>"><?php echo $row['pageno'];?></td>
                                         <td style="background-color:<?php $color ?>"><?php echo $row['adsize']; ?></td>
                                     </tr>
-                                </tbody>
                                 <?php
-                                    }
+                                    } ?>
+                                    </tbody>
+                                    <?php
                                 }
                                ?>
                             </table>
@@ -202,9 +233,7 @@ require_once("../inc/connection.php");
                 </div>
             </div>
         </div>
-
         <!-- ======== main-wrapper end =========== -->
         <?php require_once("include/script.php") ?>
 </body>
-
 </html>
