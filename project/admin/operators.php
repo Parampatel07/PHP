@@ -1,4 +1,7 @@
-<?php require_once("include/header.php") ?>
+<?php
+session_start();
+require_once("../inc/connection.php");
+require_once("include/header.php") ?>
 </head>
 
 <body>
@@ -18,8 +21,11 @@
                     <div class="card mt-3 shadow p-4">
                         <h3>Add new Operator</h3>
                         <hr>
+                        <?php
+                        require("include/message.php");
+                        ?>
                         <div class="row mt-3">
-                            <form action="" method="post">
+                            <form action="submit/insert_operators.php" enctype="multipart/form-data" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-style-1 ">
@@ -30,7 +36,8 @@
                                     <div class="col-md-6">
                                         <div class="input-style-1 ">
                                             <label for="password">Password</label>
-                                            <input type="password" name="password" id="password" placeholder="Password" />
+                                            <input type="password" name="password" id="password"
+                                                placeholder="Password" />
                                         </div>
                                     </div>
                                 </div>
@@ -38,19 +45,20 @@
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="fullname">Full name</label>
-                                            <input type="text" name="fullname" id="fullname" placeholder="Full name"/>
+                                            <input type="text" name="fullname" id="fullname" placeholder="Full name" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="mobnumber">Mobile number</label>
-                                            <input type="number" name="mobnumber" id="mobnumber" placeholder="Mobile number" />
+                                            <input type="number" name="mobnumber" id="mobnumber"
+                                                placeholder="Mobile number" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="date">Select dateof birth</label>
-                                            <input type="date" name="date" id="date"/>
+                                            <input type="date" name="date" id="date" />
                                         </div>
                                     </div>
                                 </div>
@@ -70,29 +78,58 @@
                         <hr>
                         <div class="table-responsive">
                             <table class="table table-striped display mt-4 mb-4" id="example">
-                            <thead>
-                                <tr>
-                                    <td>#</td>
-                                    <td>Email</td>
-                                    <td>Fullname</td>
-                                    <td>Mobile</td>
-                                    <td>Birth date</td>
-                                    <td>last login</td>
-                                    <td>operation</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Eamil@gmail.com</td>
-                                    <td>Param patel</td>
-                                    <td>1234567890</td>
-                                    <td>10 feb 2004</td>
-                                    <td>08-feb-2022 </td>
-                                    <td><i class="lni lni-trash-can"></i>&nbsp;&nbsp;<i class="lni lni-slice"></i></td>
-                                </tr>
-                            </tbody>
+                                <thead>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>Email</td>
+                                        <td>Fullname</td>
+                                        <td>Mobile</td>
+                                        <td>Birth date</td>
+                                        <td>last login</td>
+                                        <td>operation</td>
+                                    </tr>
+                                </thead>
+                                <?php 
+                            $sql="SELECT * from operators order by id desc";
+                            try
+                            {
+                                $statement=$db->prepare($sql);
+                                $statement->SetFetchMode(PDO::FETCH_ASSOC);
+                                $statement->execute();
+                                $table=$statement->fetchall();
+                            }
+                            catch(PDOException $error)
+                            {
+                                LogError($error , __FILE__);
+                            }
+                            require("include/message.php");
+                            if(isset($table)==true)
+                            {
+                                $count=0;
+                            ?>
+                                <tbody>
+                                    <?php
+                                    foreach($table as $row)
+                                    {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $count=$count+1; ?></td>
+                                        <td><?php echo $row['email']; ?></td>
+                                        <td>Param patel</td>
+                                        <td>1234567890</td>
+                                        <td>10 feb 2004</td>
+                                        <td>08-feb-2022 </td>
+                                        <td><i class="lni lni-trash-can"></i>&nbsp;&nbsp;<i class="lni lni-slice"></i>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </tbody>
                             </table>
+                            <?php
+                           }
+                        ?>
                         </div>
                     </div>
                 </div>

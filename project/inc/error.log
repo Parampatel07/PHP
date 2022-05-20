@@ -20,3 +20,10 @@
  Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dec' at line 1 on occured at Wed04-05-202204:58:51PM in file E:\wamp64\www\php\project\admin\catagory.php at lineno 0
  Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dec' at line 1 on occured at Wed04-05-202204:58:54PM in file E:\wamp64\www\php\project\admin\catagory.php at lineno 0
  Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dec' at line 1 on occured at Wed04-05-202204:58:54PM in file E:\wamp64\www\php\project\admin\catagory.php at lineno 0
+ Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:01:11AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
+ Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:02:43AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
+ Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:03:49AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
+ Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:05:25AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
+ Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:07:10AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
+ Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:08:09AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
+ Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:09:49AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0

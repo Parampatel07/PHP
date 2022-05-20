@@ -1,4 +1,9 @@
-<?php require_once("include/header.php") ?>
+
+<?php 
+session_start();
+require_once("include/header.php");
+require_once("../inc/connection.php")
+?>
 <style>
   .signin-wrapper
   {
@@ -23,20 +28,23 @@
         <div class="card shadow">
         <div class="signin-wrapper">  
           <div class="form-wrapper">
-            <form action="#">
+            <form action="submit/verify_admin.php" method="post" >
               <div class="row">
                 <div class="col-12">
                 <h1 class="text-center mb-5"> Login Form   </h1>
+                <?php
+                require_once("include/message.php");
+                ?>
                   <div class="input-style-1">
                     <label ><h4>Email</h4></label>
-                    <input type="email" class="form-control" placeholder="Enter your registered email here" />
+                    <input type="email" class="form-control" name="email" placeholder="Enter your registered email here" required/>
                   </div>
                 </div>
                 <!-- end col -->
                 <div class="col-12">
                   <div class="input-style-1">
                     <label><h4>Password</h4></label>
-                    <input type="password" placeholder="Enter your Password here" />
+                    <input type="password" name="password" placeholder="Enter your Password here" required/>
                   </div>
                 </div>
                 <div class="col-xxl-6 col-lg-12 col-md-6">

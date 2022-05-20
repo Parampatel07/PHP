@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once("include/verify_login.php");
 require_once("include/header.php") ;
 require_once("../inc/connection.php");
 ?>
@@ -9,7 +10,6 @@ require_once("../inc/connection.php");
 }
 </style>
 </head>
-
 <body>
     <?php require_once("include/sidebar.php") ?>
     <!-- ======== main-wrapper start =========== -->
