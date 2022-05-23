@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 require_once("include/verify_login.php");
 require_once("include/header.php") ;
 require_once("../inc/connection.php");

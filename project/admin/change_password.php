@@ -1,5 +1,7 @@
-<?php require_once("include/header.php") ?>
-
+<?php
+require_once("include/verify_login.php");
+require_once("include/header.php"); 
+?>
 </head>
 
 <body>
@@ -18,24 +20,24 @@
             <h2>Change password</h2>
           </div>
           <div class="card mt-3 shadow p-4">
-            <form action="#" method="post">
+            <form action="submit/update_password.php" method="post">
               <div class="input-style-1 ">
                 <label>Enter old password</label>
-                <input type="password" placeholder="Old password goes here" />
+                <input type="password" name="oldpassword" placeholder="Old password goes here" />
               </div>
               <!-- end input -->
               <div class="input-style-2">
                 <label>Enter new password </label>
-                <input type="password" placeholder="Enter new password here" />
+                <input type="password" name="newpassword" placeholder="Enter new password here" />
               </div>
               <!-- end input -->
               <div class="input-style-3">
                 <label class="form-label">Confirm new password</label>
-                <input type="text" placeholder="Re-entre new password" />
+                <input type="password" name="conpassword" placeholder="Re-entre new password" />
               </div>
               <div class="mb-3 float-end">
-                <button type="submit" class="btn btn-success">Save changes</button>
-                <button type="reset" class="btn btn-danger">Reset</button>
+                <input type="submit" class="btn btn-success" value="Save Changes"></input>
+                <input type="reset" class="btn btn-danger"></input>
               </div>
             </form>
           </div>

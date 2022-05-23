@@ -43,7 +43,7 @@
                       <a href="change_password.php"> <i class="lni lni-cog"></i>Change password </a>
                     </li>
                     <li>
-                      <a href="#0"> <i class="lni lni-exit"></i> Sign Out </a>
+                      <a href="logout.php"> <i class="lni lni-exit"></i> Sign Out </a>
                     </li>
                   </ul>
                 </div>

@@ -23,7 +23,7 @@ try
         $ispass=password_verify($password,$HashedPassword);
         if($ispass==false)
         {
-            $_SESSION['message']="Password not match";
+            $_SESSION['message']="Invalid Login Input";
         }
         else
         {

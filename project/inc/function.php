@@ -24,7 +24,7 @@
 			
 			and then enable less secure mail option (turn on) */ 
 			
-			require_once($_SERVER['DOCUMENT_ROOT']. '/php_b19/project/lib/class.phpmailer.php');
+			require_once($_SERVER['DOCUMENT_ROOT']. '/php/project/lib/class.phpmailer.php');
 			$UserName="demoblahblahblah@gmail.com"; // replace with your own gmail email address
 			$Password="THQaUN2N"; // replace with your own gmail email password
 			$SenderEmailAddress=$UserName; // replace with your own gmail email address
