@@ -11,13 +11,38 @@ try
     $statement->bindparam(1,$_SESSION['admin_id']);
     $statement->execute();
     $row=$statement->fetch();
-    // var_dump($row);
+    var_dump($row);
     if(sizeof($row)>=1)
     {
-        if($row['password']!=$oldpassword)
+        if(password_verify($oldpassword,$row['password'])==false)
         {
-            $_SESSION['message']= "Incorrect Old password";
-            
+            $_SESSION['message']="Old Password does not match";
+        }
+        else
+        {
+            if($newpassword!=$conpassword)
+            {
+                $_SESSION['message']=" new password and confirm password does not match";
+            }
+            else
+            {
+                $hashnewpassword=password_hash($newpassword,PASSWORD_DEFAULT);
+                echo $hashnewpassword;
+                try
+                {
+                    $sql="UPDATE admin set password=? WHERE id=?";
+                    $statement=$db->prepare($sql);
+                    $statement->bindparam(1,$hashnewpassword);
+                    $statement->bindparam(2,$_SESSION['admin_id']);
+                    $statement->execute();
+                    $_SESSION['message']="Your Password has been updated";
+                    // echo "yeah boi";
+                }
+                catch(PDOException $error)
+                {
+                    LogError($error,__FILE__);
+                }
+            }
         }
     }
 }
@@ -25,4 +50,5 @@ catch(PDOException $error)
 {
     LogError($error,__FILE__);
 }
+header("location:../change_password.php");
 ?>

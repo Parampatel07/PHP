@@ -1,5 +1,5 @@
 <?php
-    $param=123123;
+    $param=986962;
     $md5=md5($param);
     echo $md5;
     echo "<br>";
@@ -11,7 +11,7 @@
     echo $password_hash1;
 
     echo "<br>";
-    $password=123123;
+    $password=986962;
     $ismatch =password_verify($password,$password_hash1);
     echo $ismatch;
 

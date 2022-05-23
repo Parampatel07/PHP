@@ -183,7 +183,7 @@ require_once("../inc/connection.php");
                                         <i class="lni lni-trash-can"></i>
                                         </a>
                                         &nbsp;&nbsp;
-                                        <a href="" class="btn btn-success">
+                                        <a href="update_category.php?id=<?php echo $row['id'];?>" class="btn btn-success">
                                         <i class="lni lni-slice"></i>
                                         </a>
                                         </td>

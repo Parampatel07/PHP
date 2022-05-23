@@ -27,3 +27,6 @@
  Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:07:10AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
  Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:08:09AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
  Error Code23000 ErrorDetail Column 'email' cannot be null on occured at Sat07-05-202211:09:49AM in file E:\wamp64\www\php\project\admin\submit\insert_operators.php at lineno 0
+ Error CodeHY093 ErrorDetail  on occured at Mon23-05-202212:11:37PM in file E:\wamp64\www\php\project\admin\submit\update_password.php at lineno 0
+ Error CodeHY093 ErrorDetail  on occured at Mon23-05-202212:13:36PM in file E:\wamp64\www\php\project\admin\submit\update_password.php at lineno 0
+ Error CodeHY093 ErrorDetail  on occured at Mon23-05-202212:13:37PM in file E:\wamp64\www\php\project\admin\submit\update_password.php at lineno 0

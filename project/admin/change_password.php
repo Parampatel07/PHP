@@ -21,6 +21,9 @@ require_once("include/header.php");
           </div>
           <div class="card mt-3 shadow p-4">
             <form action="submit/update_password.php" method="post">
+              <?php
+require_once("include/message.php");
+              ?>
               <div class="input-style-1 ">
                 <label>Enter old password</label>
                 <input type="password" name="oldpassword" placeholder="Old password goes here" />
