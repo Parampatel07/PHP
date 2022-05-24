@@ -59,7 +59,7 @@ require_once("../inc/connection.php");
                                     </div>
                                 </div>
                                 <div class="row">
-<?php
+                                    <?php
 $news="checked";
 $website=" ";
 if($row['adtype']==2)
@@ -72,21 +72,21 @@ if($row['adtype']==2)
                                         <legend class="col-form-label col-sm-12 pt-0">Select Advertise type</legend>
                                         <div class="form-check">
                                             <input required class="form-check-input" type="radio" name="adtype"
-                                                id="news" value="1" <?php echo $news;?> >
+                                                id="news" value="1" <?php echo $news;?>>
                                             <label class="form-check-label" for="news">
                                                 News Paper
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input required class="form-check-input" type="radio" name="adtype"
-                                                id="website" value="1" <?php echo $website;?> >
+                                                id="website" value="1" <?php echo $website;?>>
                                             <label class="form-check-label" for="website">
                                                 Website/Application
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-<?php
+                                        <?php
 $text="checked";
 $mutli=" ";
 $anime=" ";
@@ -107,21 +107,21 @@ elseif($row['subadtype']==3)
                                         </legend>
                                         <div class="form-check">
                                             <input required class="form-check-input" type="radio" name="rdo"
-                                                id="Standard" value="2" <?php echo $text;?> >
+                                                id="Standard" value="2" <?php echo $text;?>>
                                             <label class="form-check-label" for="Standard">
                                                 Standard(black and white)
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input required class="form-check-input" <?php echo $multi?> type="radio" name="rdo"
-                                                id="Classified" value="2">
+                                            <input required class="form-check-input" <?php echo $multi?> type="radio"
+                                                name="rdo" id="Classified" value="2">
                                             <label class="form-check-label" for="Classified">
                                                 Classified(mutlicolor)
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input required class="form-check-input" <?php echo $anime?> type="radio" name="rdo"
-                                                id="Animation" value="2">
+                                            <input required class="form-check-input" <?php echo $anime?> type="radio"
+                                                name="rdo" id="Animation" value="2">
                                             <label class="form-check-label" for="Animation">
                                                 Animation
                                             </label>
@@ -150,15 +150,22 @@ elseif($row['subadtype']==3)
                                                 value="<?php echo $row['rate'] ?>" />
                                         </div>
                                     </div>
+
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="sample">Change image</label>
-                                            <input type="file" value="<?php echo $row['sampleimage']?>"
-                                                name="sample" id="sample" />
+                                            <input type="file" value="<?php echo $row['sampleimage']?>" name="sample"
+                                                id="sample" />
+                                            <input type="hidden" name="categoryid"
+                                                value="<?php echo $row['id']; ?>">
+                                            <input type="hidden" name="oldsampleimage"
+                                                value="<?php echo $row['sampleimage']; ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-4 offset-4 text-center">
-                                        <img src="../images/category/<?php echo $row['sampleimage'];?>" class="img-fluid" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" alt="">
+                                        <img src="../images/category/<?php echo $row['sampleimage'];?>"
+                                            class="img-fluid" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+                                            alt="">
                                     </div>
                                 </div>
                                 <div class="mb-3 float-end">
