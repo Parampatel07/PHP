@@ -17,6 +17,7 @@ session_start();
     $statement->bindparam(6,$adsize);
     $statement->bindparam(7,$rate);
     $photo = rand(11,99).rand(11,99).rand(11,99).$_FILES['sample']['name'];
+    $_SESSION['photo']=$photo;
     $statement->bindparam(8,$photo);
     $statement->execute();
     move_uploaded_file($_FILES['sample']['tmp_name'],"../../images/category/$photo");
