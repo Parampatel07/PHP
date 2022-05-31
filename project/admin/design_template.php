@@ -1,4 +1,7 @@
-<?php require_once("include/header.php") ?>
+<?php 
+require_once("include/verify_login.php");
+require_once("../inc/connection.php");
+require_once("include/header.php"); ?>
 </head>
 
 <body>
@@ -19,21 +22,39 @@
                         <h3>Add new Template</h3>
                         <hr>
                         <div class="row mt-3">
-                            <form action="" method="post">
+                            <form action="submit/insert_template.php" method="post" enctype="multipart/form-data">
                                 <div class="row">
+                                    <?php
+                                        $sql="SELECT id,ctitle from category";
+                                        $statement=$db->prepare($sql);
+                                        $statement->setfetchmode(PDO::FETCH_ASSOC);
+                                        $statement->execute();
+                                        $rows=$statement->fetchAll();
+                                    ?>
+                                    <div class="col-12">
+                                    <?php
+require("include/message.php");
+                                        ?>
+                                    </div>
                                     <div class="col-md-6">
                                         <div class="input-style-2">
                                             <label class="form-label" for="catagory">Select category</label>
-                                            <select name="catagory" class="form-control" name="catagory" id="catagory" aria-label="state">
-                                                <option value="2" selected>Dummy category</option>
-                                                <option value="3">Second Dummy category</option>
+                                            <select name="catagory" class="form-control" name="catagory" id="catagory"
+                                                aria-label="state" required>
+                                                <option value="">Select Category</option>
+                                                <?php                                          
+                                            foreach($rows as $row)
+                                            {
+                                                echo "<option value='{$row['id']}'>{$row['ctitle']}</option>";
+                                            }  
+                                            ?>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-style-1 ">
                                             <label for="title">Title</label>
-                                            <input type="text" name="title" id="title" placeholder="Title" />
+                                            <input type="text" name="title" id="title" placeholder="Title" required />
                                         </div>
                                     </div>
                                 </div>
@@ -41,19 +62,21 @@
                                     <div class="col-md-4">
                                         <div class="input-style-1 ">
                                             <label for="sample">Select photo</label>
-                                            <input type="file" class="form-control-file" name="sample" id="sample" />
+                                            <input type="file" class="form-control-file" name="sample" id="sample"
+                                                required />
                                         </div>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="input-style-1 ">
                                             <label for="description">Description</label>
-                                            <textarea class="form-control" placeholder="Description" id="description" name="description" style="height: 100px;"></textarea>
+                                            <textarea class="form-control" placeholder="Description" id="description"
+                                                name="description" style="height: 100px;" required></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 float-end">
-                                    <button type="submit" class="btn btn-success">Save changes</button>
-                                    <button type="reset" class="btn btn-danger">Reset</button>
+                                    <input type="submit" class="btn btn-success" value="Save changes"></input>
+                                    <input type="reset" class="btn btn-danger" value="Reset"></input>
                                 </div>
                             </form>
                         </div>
@@ -68,32 +91,63 @@
                         <hr>
                         <div class="table-responsive">
                             <table class="table table-striped display mt-4 mb-4" id="example">
-                            <thead>
-                                <tr>
-                                    <td>#</td>
-                                    <td>Task</td>
-                                    <td>Category</td>
-                                    <td>Photo</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2</td>
-                                    <td><i class="lni lni-trash-can"></i>&nbsp;&nbsp;<i class="lni lni-slice"></i></td>
-                                    <td>Dummy category</td>
-                                    <td><img src="https://picsum.photos/50" alt=""></td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, aperiam. Odit, deleniti tempore. Labore nesciunt error dolorum illo, enim dolores consectetur veniam vero repudiandae ea culpa! Nisi libero rerum iure!</td>
-                                </tr>
-                            </tbody>
+                                <thead>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>Task</td>
+                                        <td>Title</td>
+                                        <td>Category</td>
+                                        <td>Photo</td>
+                                        <td>Description</td>
+                                    </tr>
+                                </thead>
+                                <?php
+                            try
+                            {
+                                $sql="SELECT t.* , c.ctitle from template t, category c where t.categoryid=c.id";
+                                $statement=$db->prepare($sql);
+                                $statement->setfetchmode(PDO::FETCH_ASSOC);
+                                $statement->execute();
+                                $table=$statement->fetchAll();
+                                // var_dump($row);/
+                            }
+                            catch(PDOException $error)
+                            {
+                                LogError($error,__FILE__);
+                            }
+                            ?>
+                                <tbody>
+                                    <?php
+                                    $count=1;
+                                    foreach($table as $row)
+                                    {
+                                        // var_dump($row);
+                                        ?>
+                                    <tr>
+                                        <td><?php echo $count++ ?></td>
+                                        <td>
+                                           <a href="submit/delete_template.php?templateid=<?php $row['id'] ?>"> <i class="lni lni-trash-can"></i></a>
+                                            &nbsp;&nbsp;
+                                            <a href="submit/edit_template.php"><i class="lni lni-slice"></i></a>
+                                        </td>
+                                        <td><?php echo $row['title']?></td>
+                                        <td><?php 
+                                           echo $row['ctitle'];
+                                        ?></td>
+                                        <td><img src="../images/template/<?php echo $row['image'] ?>" height="100px"
+                                                width="100px" alt=""></td>
+                                        <td><?php echo $row['description']?></td>
+                                    </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
         <!-- ======== main-wrapper end =========== -->
         <?php require_once("include/script.php") ?>
 </body>

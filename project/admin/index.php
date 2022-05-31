@@ -11,7 +11,7 @@ require_once("../inc/connection.php")
   }
   body
   {
-    background-image: url("images/try3.jpg");
+    /* background-image: url("images/try3.jpg"); */
     background-size: 1200px 700px;
   }
   .card
