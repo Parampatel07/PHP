@@ -3,10 +3,9 @@ session_start();
 require_once("../inc/connection.php");
 require_once("include/header.php") ?>
 </head>
-
 <body>
     <?php require_once("include/sidebar.php") ?>
-    <!-- ======== main-wrapper start =========== -->
+    <!-- ======== main-wrapper start =========== 10 -->
     <?php require_once("include/wrapper.php") ?>
     <!-- ========== section end ========== -->
     <section class="section">
@@ -106,6 +105,7 @@ require_once("include/header.php") ?>
                             if(isset($table)==true)
                             {
                                 $count=0;
+                                var_dump($table);
                             ?>
                                 <tbody>
                                     <?php
@@ -115,10 +115,10 @@ require_once("include/header.php") ?>
                                     <tr>
                                         <td><?php echo $count=$count+1; ?></td>
                                         <td><?php echo $row['email']; ?></td>
-                                        <td>Param patel</td>
-                                        <td>1234567890</td>
-                                        <td>10 feb 2004</td>
-                                        <td>08-feb-2022 </td>
+                                        <td><?php echo $row['fullname']?></td>
+                                        <td><?php echo $row['mobile']?></td>
+                                        <td><?php echo $row['dob']?></td>
+                                        <td width="50%"><?php echo $row['last_login_date'] ?></td>
                                         <td><i class="lni lni-trash-can"></i>&nbsp;&nbsp;<i class="lni lni-slice"></i>
                                         </td>
                                     </tr>
@@ -134,11 +134,8 @@ require_once("include/header.php") ?>
                     </div>
                 </div>
             </div>
-
         </div>
-
         <!-- ======== main-wrapper end =========== -->
         <?php require_once("include/script.php") ?>
 </body>
-
 </html>

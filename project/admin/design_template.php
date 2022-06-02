@@ -109,7 +109,7 @@ require("include/message.php");
                                 $statement->setfetchmode(PDO::FETCH_ASSOC);
                                 $statement->execute();
                                 $table=$statement->fetchAll();
-                                // var_dump($row);/
+                                // var_dump($row);
                             }
                             catch(PDOException $error)
                             {
@@ -126,9 +126,10 @@ require("include/message.php");
                                     <tr>
                                         <td><?php echo $count++ ?></td>
                                         <td>
-                                           <a href="submit/delete_template.php?templateid=<?php $row['id'] ?>"> <i class="lni lni-trash-can"></i></a>
+                                           <a href="submit/delete_template.php?templateid=<?php echo $row['id'] ?>&image=<?php echo $row['image']; ?>">
+                                            <i class="lni lni-trash-can"></i></a>
                                             &nbsp;&nbsp;
-                                            <a href="submit/edit_template.php"><i class="lni lni-slice"></i></a>
+                                            <a href="update_design_template.php?templateid=<?php echo $row['id']?>"><i class="lni lni-slice"></i></a>
                                         </td>
                                         <td><?php echo $row['title']?></td>
                                         <td><?php 

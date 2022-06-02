@@ -16,7 +16,7 @@ try
     $statement->execute();
     move_uploaded_file($_FILES['sample']['tmp_name'],"../../images/template/$photo");
     echo "category inserted";
-    $_SESSION['message']="Category has been inserted";
+    $_SESSION['message']="Template has been inserted";
 }
 catch(PDOException $error)
 {
