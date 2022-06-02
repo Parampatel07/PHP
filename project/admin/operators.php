@@ -5,7 +5,7 @@ require_once("include/header.php") ?>
 </head>
 <body>
     <?php require_once("include/sidebar.php") ?>
-    <!-- ======== main-wrapper start =========== 10 -->
+    <!-- ======== main-wrapper start =========== -->
     <?php require_once("include/wrapper.php") ?>
     <!-- ========== section end ========== -->
     <section class="section">
