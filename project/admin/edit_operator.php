@@ -116,7 +116,7 @@ require_once("include/header.php") ?>
                                                 <td>
                                                     <a href="submit/delete_operator.php?operatorid=<?php echo $row['id']; ?>"><i class="lni lni-trash-can"></i></a>
                                                     &nbsp;&nbsp;
-                                                    <a href="submit/edit_operator.php?operatorid=<?php echo $row['id']; ?>">
+                                                    <a href="submit/update_operator.php?operatorid=<?php echo $row['id']; ?>">
                                                         <i class="lni lni-slice"></i>
                                                     </a>
                                                 </td>
