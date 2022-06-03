@@ -35,25 +35,17 @@ require_once("include/header.php") ?>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-style-1 ">
-                                            <label for="password">Password</label>
-                                            <input type="password" name="password" id="password" placeholder="Password" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="input-style-1 ">
                                             <label for="fullname">Full name</label>
                                             <input type="text" name="fullname" id="fullname" placeholder="Full name" />
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="input-style-1 ">
                                             <label for="mobnumber">Mobile number</label>
                                             <input type="number" name="mobnumber" id="mobnumber" placeholder="Mobile number" />
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="input-style-1 ">
                                             <label for="date">Select dateof birth</label>
                                             <input type="date" name="date" id="date" />
@@ -116,7 +108,7 @@ require_once("include/header.php") ?>
                                                 <td>
                                                     <a href="submit/delete_operator.php?operatorid=<?php echo $row['id']; ?>"><i class="lni lni-trash-can"></i></a>
                                                     &nbsp;&nbsp;
-                                                    <a href="submit/edit_operator.php?operatorid=<?php echo $row['id']; ?>">
+                                                    <a href="edit_operator.php?operatorid=<?php echo $row['id']; ?>">
                                                         <i class="lni lni-slice"></i>
                                                     </a>
                                                 </td>

@@ -7,7 +7,8 @@ try
 {
     $statement= $db->prepare($sql);
     $statement->bindparam(1,$email);
-    $statement->bindparam(2,$password);
+    $haspass=password_hash($password,PASSWORD_DEFAULT); 
+    $statement->bindparam(2,$haspass);
     $statement->bindparam(3,$fullname);
     $statement->bindparam(4,$mobnumber);
     $statement->bindparam(5,$date);

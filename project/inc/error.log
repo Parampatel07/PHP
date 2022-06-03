@@ -88,3 +88,6 @@
  Error Code42S02 ErrorDetail Table 'advertise_booking.operator' doesn't exist on occured at Fri03-06-202208:17:23AM in file E:\wamp64\www\php\project\admin\submit\delete_operator.php at lineno 0
  Error Code42S02 ErrorDetail Table 'advertise_booking.operator' doesn't exist on occured at Fri03-06-202208:17:36AM in file E:\wamp64\www\php\project\admin\submit\delete_operator.php at lineno 0
  Error Code42S02 ErrorDetail Table 'advertise_booking.operator' doesn't exist on occured at Fri03-06-202208:18:09AM in file E:\wamp64\www\php\project\admin\submit\delete_operator.php at lineno 0
+ Error CodeHY093 ErrorDetail  on occured at Fri03-06-202204:00:22PM in file E:\wamp64\www\php\project\admin\submit\update_operator.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where id='7'' at line 1 on occured at Fri03-06-202204:03:42PM in file E:\wamp64\www\php\project\admin\submit\update_operator.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where id='7'' at line 1 on occured at Fri03-06-202204:04:45PM in file E:\wamp64\www\php\project\admin\submit\update_operator.php at lineno 0
