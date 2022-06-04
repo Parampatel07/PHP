@@ -1,4 +1,8 @@
-<?php require_once("include/header.php") ?>
+<?php
+require_once("include/header.php");
+require_once("../inc/connection.php");
+require_once("include/verify_login.php");
+?>
 </head>
 
 <body>
@@ -18,37 +22,66 @@
                     <div class="card mt-4 shadow p-5">
                         <h3>Existing Design template</h3>
                         <hr>
+                        <?php
+require("include/message.php");
+try {
+                            $sql ="SELECT feedback.* ,a.name, ab.id 'advertiseid' FROM feedback ,advertiser a, advertise_book ab WHERE feedback.id=a.id and feedback.id=ab.id";
+                            $statement = $db->prepare($sql);
+                            $statement->setfetchmode(PDO::FETCH_ASSOC);
+                            $statement->execute();
+                            $table=$statement->fetchAll();
+                        } catch (PDOException $error) {
+                            LogError($error, __FILE__);
+                        }
+                        ?>
                         <div class="table-responsive">
                             <table class="table table-striped display mt-4 mb-4" id="example">
                                 <thead>
                                     <tr>
-                                        <td>#</td>
-                                        <td>Category</td>
-                                        <td>Photo</td>
+                                        <td>Sr no.</td>
+                                        <td>Customer</td>
+                                        <td>Advertiser id</td>
+                                        <td>Title</td>
                                         <td>Description</td>
-                                        <td>Delete</td>
-                                        <td>Reply</td>
+                                        <td>Status</td>
+                                        <td>Operation</td>
                                     </tr>
                                 </thead>
-                                <tbody >
+                                <tbody>
+                                    <?php 
+                                    $count=0;
+                                    foreach($table as $row)
+                                    {
+                                        ?>
                                     <tr>
-                                        <td>2</td>
-                                        <td>Dummy category</td>
-                                        <td><img src="https://picsum.photos/50" alt=""></td>
-                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, aperiam.
-                                            Odit, deleniti tempore. Labore nesciunt error dolorum illo, enim dolores
-                                            consectetur veniam vero repudiandae ea culpa! Nisi libero rerum iure!</td>
-                                            <td>
-                                                <h1 class=" text-danger text-center">
+                                        <td><?php echo $count++ ?></td>
+                                        <td><?php echo $row['name'];  ?></td>
+                                        <td><?php echo $row['advertiseid'];?></td>
+                                        <td><?php echo $row['title'];?></td>
+                                        <td><?php echo $row['description'];?></td>
+                                        <?php $current="Delevired";
+                                        $color="success";
+                                        if($row['status']==0)
+                                        {
+                                            $current="Sending";
+                                            $color="warning";
+                                        }
+                                        ?>
+                                        <td class="bg-<?php echo $color;?> text-light"><?php echo $current ?></td>
+                                        <td>
+                                            <h1 class=" text-danger text-center">
                                                 <i class="lni lni-trash-can"></i>
-                                                </h1>
-                                            </td>
-                                            <td>
-                                                <h1 class=" text-success text-center">
-                                                    <a href="feedback_reply.php"> <i class="lni lni-comments-reply"></i></a>
-                                                </h1>
-                                            </td>
+                                            </h1>
+                                        </td>
+                                        <td>
+                                            <h1 class=" text-success text-center">
+                                                <a href="feedback_reply.php?customerid=<?php echo $row['id'] ?>&advertiseid=<?php echo $row['advertiseid']; ?>&feedbackid=<?php echo $row['id']; ?>"> <i class="lni lni-comments-reply"></i></a>
+                                            </h1>
+                                        </td>
                                     </tr>
+                                    <?php
+}
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
