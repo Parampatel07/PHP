@@ -1,12 +1,11 @@
-<?php require_once("inc/header.php")?>
+<?php require_once("inc/header.php");
+require_once("inc/connection.php");?>
 </head>
-
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
     <?php require_once("inc/menu.php")?>
     <!-- Modal -->
     <!-- end modal -->
     <div class="overflow-hidden-x">
-
         <section class="section home home-1" id="home" data-spy="scroll" data-target="#navbar-example">
             <div class="bg-overlay"></div>
             <div class="container">
@@ -52,7 +51,7 @@
                     </div><!-- end col-->
                 </div><!-- end row-->
             </div>
-            <!--end container-->
+         <!--end container-->
         </section>
         <section class="section team" style="z-index: 1;">
             <div id="particles-js" style="z-index: -1;">
@@ -69,14 +68,32 @@
                     </div><!-- end col-->
                 </div><!-- end row -->
                 <div class="row gy-4">
-                    <div class="col-lg-3 col-sm-6">
+                    <?php 
+                    $sql="SELECT ctitle,description,sampleimage from category";
+                    try
+                    {
+                        
+                        $statement=$db->prepare($sql);
+                        $statement->setfetchmode(PDO::FETCH_ASSOC);
+                        $statement->execute();
+                        $table=$statement->fetchall();
+                        // var_dump($table);
+                    }
+                    catch(PDOException $error)
+                    {
+                        LogError($error,__FILE__);
+                    }
+                    foreach($table as $row)
+                    {
+                    ?>
+                        <div class="col-lg-3 col-sm-6">
                         <div class="team-card">
                             <div class="team-card-img text-center">
-                                <img class="img-fluid" src="https://picsum.photos/261" alt="image">
+                                <img class="img-fluid" src="images/category/<?php echo $row['sampleimage']; ?>" alt="image" style="height: 261px; width: 262px;;">
                                 <div class="team-social-icons">
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
+                                            <a href="#"
                                                 target="">
                                                 <i class="mdi mdi-facebook"></i>
                                             </a>
@@ -114,141 +131,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="team-card">
-                            <div class="team-card-img text-center">
-                                <img class="img-fluid" src="https://picsum.photos/261" alt="image">
-                                <div class="team-social-icons">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-card-text-2">
-                                <h5 class="fw-bold mb-0">Title goes here</h5>
-                                <p class="mb-0 fs-13 text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                    elit. Exercitationem minima quae expedita beatae consequuntur perferendis labore
-                                    corrupti in soluta similique nihil cupiditate provident, obcaecati incidunt
-                                    perspiciatis, alias libero odio illo?</p>
-                                <div class="mt-3 text-center">
-                                    <a href="advertise_template.php" class="btn btn-primary btn-block">View more details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="team-card">
-                            <div class="team-card-img text-center">
-                                <img class="img-fluid" src="https://picsum.photos/261" alt="image">
-                                <div class="team-social-icons">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-card-text-2 ">
-                                <h5 class="fw-bold mb-0">Title goes here</h5>
-                                <p class="mb-0 fs-13 text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                    elit. Exercitationem minima quae expedita beatae consequuntur perferendis labore
-                                    corrupti in soluta similique nihil cupiditate provident, obcaecati incidunt
-                                    perspiciatis, alias libero odio illo?</p>
-                                <div class="mt-3 text-center">
-                                    <a href="advertise_template.php" class="btn btn-primary btn-block">View more details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="team-card">
-                            <div class="team-card-img text-center">
-                                <img class="img-fluid" src="https://picsum.photos/261" alt="image">
-                                <div class="team-social-icons">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-linkedin"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="project2\themesdesign.in\oxhen\layouts/javascript:void(0)"
-                                                target="">
-                                                <i class="mdi mdi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-card-text-2">
-                                <h5 class="fw-bold mb-0">Title goes here</h5>
-                                <p class="mb-0 fs-13 text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                    elit. Exercitationem minima quae expedita beatae consequuntur perferendis labore
-                                    corrupti in soluta similique nihil cupiditate provident, obcaecati incidunt
-                                    perspiciatis, alias libero odio illo?</p>
-                                <div class="mt-3 text-center">
-                                    <a href="advertise_template.php" class="btn btn-primary btn-block">View more details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php    
+                    }
+                    ?>
                     <!-- End col-->
                 </div><!-- end row-->
             </div><!-- end cotainer-->
