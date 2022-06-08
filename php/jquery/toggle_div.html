@@ -18,17 +18,103 @@
     ></script>
   </head>
   <body>
-    <h1>JQuery Toggle one div one is clicked</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>JQuery Toggle one div,When one is clicked</h1>
+          <div class="bg-success m-4 text-light p-4 one">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            consequatur explicabo accusantium tempore, necessitatibus dolores
+            veniam minima delectus molestiae beatae incidunt doloribus sapiente
+            quasi rem, ipsum, non unde quidem nobis. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quaerat laudantium ullam rem, optio
+            maxime harum vitae vel, aspernatur inventore possimus praesentium
+            assumenda. Tempore non soluta laudantium. Voluptate error sunt
+            reiciendis. Quos tempora voluptates nobis soluta maiores ullam hic,
+            autem temporibus voluptas pariatur dolor, veniam, numquam quam!
+            Iusto, ad! Ut fuga nihil architecto doloribus nisi odit ea ipsa
+            molestias quas quaerat. Sint modi in molestiae placeat alias dolorum
+            unde fugiat saepe, explicabo, voluptate animi aspernatur nulla
+            perspiciatis quos eius ratione dicta. Quisquam illo laudantium
+            officiis perspiciatis nam quos hic aliquam tempore! Minima porro
+            quae voluptatem maxime vero laborum quidem obcaecati illo beatae
+            molestias adipisci doloribus, autem, tenetur aliquid sed distinctio
+            sint omnis officia quia optio dicta? Architecto placeat quia id nam.
+            Quibusdam dicta impedit quod nostrum explicabo eius commodi
+            praesentium, soluta debitis aperiam. Vitae facere qui, velit
+            reiciendis sequi vel iusto natus, illo atque, amet voluptatem vero
+            doloribus eligendi! Est, quisquam! Assumenda tenetur dolorem
+            doloribus eaque quas optio adipisci doloremque ipsum aliquam commodi
+            amet non laborum sed architecto necessitatibus maxime
+            exercitationem, qui dolorum velit unde quibusdam iste totam nemo!
+            Dolore, explicabo. Corporis quam harum iste aut labore maiores vero
+            accusantium aperiam dolores optio veniam omnis ex, consectetur,
+            asperiores, repellat deserunt quae in. Reiciendis veritatis illum
+            inventore totam placeat voluptates dolor similique? Sit a velit
+            voluptates temporibus nisi praesentium at consectetur mollitia vel
+            maiores quos accusamus iste rerum magnam dolorem corrupti tempora
+            nam natus asperiores, commodi excepturi error illum nostrum facere?
+            Aliquam. Hic molestiae mollitia nihil a qui officia quisquam
+            expedita ab veniam itaque. Ex est quae expedita vero cum et esse?
+            Dolor tempore aliquid impedit eos a explicabo. Delectus, vero iste.
+            Unde distinctio debitis sunt possimus praesentium consequuntur vero
+            minus ea veniam tenetur ratione, eum illo et culpa beatae iure modi
+            ullam dolorem exercitationem! Tempora quo suscipit provident
+            assumenda omnis voluptatem!
+          </div>
+          <div class="bg-danger m-4 text-light p-4 two">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            porro blanditiis enim sunt ratione reiciendis quibusdam odio, vitae,
+            autem ducimus rerum provident atque animi at amet quisquam? Aliquam,
+            sit nam. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Facere blanditiis explicabo natus dolorem, ducimus odit illo rerum
+            tempora in minus ad maiores modi, eligendi doloribus veniam quae
+            ipsum impedit autem! Rem omnis voluptate sequi quas obcaecati
+            commodi alias eius, impedit, veritatis inventore iure repellat
+            officiis quisquam architecto corrupti optio mollitia quos nesciunt.
+            Culpa ducimus animi unde enim. Vitae, deleniti nobis? Voluptate
+            aliquam nihil dicta fuga, labore hic dolorum, quaerat minima
+            inventore fugiat molestias officia rerum minus quos doloremque
+            impedit quas neque a aperiam, deleniti earum optio eius sequi?
+            Laborum, unde. Quo laborum commodi voluptates fuga earum quia
+            molestias tempore dignissimos vero, aut explicabo cupiditate, ut
+            architecto? At sed magnam officiis cum quod mollitia, voluptatem
+            quidem minus tempore id aliquid fugiat? Repudiandae eveniet culpa
+            sit ad nulla corporis explicabo, inventore ea aperiam harum maxime
+            minus nemo, consequatur optio corrupti! Asperiores laudantium
+            mollitia labore ut ducimus dolorem porro maiores necessitatibus eos
+            eum. Maxime illo, error repellendus optio pariatur quo rerum
+            voluptatibus laborum inventore, cupiditate enim fugiat molestiae.
+            Deleniti veniam quos, eius pariatur aut voluptates quasi consectetur
+            accusamus. Corporis fugit sed id ea! Nulla ipsam consequatur aliquam
+            voluptates dicta praesentium aperiam velit beatae minus culpa ex
+            vitae, eligendi dignissimos maiores iusto ullam, architecto quaerat
+            hic. Veniam voluptatum incidunt quasi mollitia quas quae possimus.
+            Maiores voluptate modi recusandae! Omnis tempore, nulla vel
+            consectetur doloribus consequatur commodi veniam voluptatibus
+            dolorem harum qui officia doloremque ipsum? Doloribus ab rerum sequi
+            vitae quae. Atque totam placeat quis! Repellat qui, saepe illum
+            soluta maxime odit repudiandae magnam omnis dicta vero officia
+            debitis cumque eligendi et eum excepturi. Voluptatem exercitationem
+            quia corrupti quae adipisci odit ratione, labore et illo! Optio ut
+            voluptate atque odio vitae eius, ducimus voluptas est exercitationem
+            ea aliquid eaque animi repudiandae, corrupti quam labore error ex
+            unde obcaecati incidunt assumenda debitis ipsa deleniti. Ipsam,
+            distinctio.
+          </div>
         </div>
+      </div>
     </div>
-</div>
     <script src="jquery.min.js"></script>
     <script>
-
+      $("document").ready(function () {
+        $(".one").click(function () {
+          $(".two").toggle();
+        });
+        $(".two").click(function () {
+          $(".one").toggle();
+        });
+      });
     </script>
   </body>
 </html>
