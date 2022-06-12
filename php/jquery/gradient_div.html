@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+       
+    </style>
+  </head>
+  <body>
+    <h1 >Gradient Div</h1>
+        <div id="background">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum vero consectetur necessitatibus blanditiis eligendi corrupti id, sint commodi tempore eaque labore pariatur! Et perferendis quaerat doloremque repellendus laudantium alias velit adipisci magnam assumenda, vitae accusantium pariatur, mollitia consectetur laboriosam. Dolore cupiditate quaerat, ipsam laudantium omnis ut eaque magnam qui possimus ex distinctio nemo necessitatibus hic doloribus ea enim id ipsum facere quod veritatis? Expedita a voluptate ducimus, quisquam assumenda voluptatem inventore voluptas eligendi repellat sequi, animi minus obcaecati, quis fugit corrupti! Veniam, alias. Temporibus nihil rem facilis vitae necessitatibus recusandae maxime placeat, modi magni ab! Quisquam, vel est velit cumque quam inventore iure temporibus nesciunt, molestiae quos sequi repellendus laborum. Repudiandae veritatis maxime, cum et laborum perspiciatis eos consequuntur nisi illo omnis, quod ex ad expedita? A laborum molestias perferendis iusto ab atque assumenda deleniti quis nulla magni. Animi adipisci itaque similique sint modi esse ad ducimus possimus, quidem a!
+        </div>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(background).mouseenter(function(){
+                $(this).css("background-image","url(j_back.jpg)").addClass("text-light");
+            });
+            $(background).mouseleave(function(){
+                $(this).removeAttr("style").removeClass("text-light");
+            })
+        });
+    </script>
+  </body>
+</html>

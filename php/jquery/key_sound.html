@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .animation:hover {
+          cursor: pointer;
+          background: url('my_animation.gif'), url('Background.jpg');
+         **ADD some code here to trigger my_sound.mp3**
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <div class="col-8 offset-2 mt-5">
+          <h1 class="text-center">Keyboard sound</h1>
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextarea2"
+              style="height: 100px"
+            ></textarea>
+            <label for="floatingTextarea2">Add text for sound</label>
+            <figure>
+                <figcaption>Listen to the T-Rex:</figcaption>
+                <audio id="audio" 
+                    src="keysound.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                </audio>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("it is ready to go");
+        $("textarea").keypress(function(){
+            $('textarea').css("background-color","red");
+        });
+      });
+    </script>
+  </body>
+</html>
