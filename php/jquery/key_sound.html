@@ -37,14 +37,6 @@
               style="height: 100px"
             ></textarea>
             <label for="floatingTextarea2">Add text for sound</label>
-            <figure>
-                <figcaption>Listen to the T-Rex:</figcaption>
-                <audio id="audio" 
-                    src="keysound.mp3">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>
-            </figure>
           </div>
         </div>
       </div>
@@ -54,7 +46,9 @@
       $(document).ready(function () {
         console.log("it is ready to go");
         $("textarea").keypress(function(){
-            $('textarea').css("background-color","red");
+         // $(this).css("background-color","red");
+          var audio= new Audio('keypress.mp3');
+          audio.play();
         });
       });
     </script>
