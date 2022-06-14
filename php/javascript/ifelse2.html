@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">Javascript ifelse</h1>
+        </div>
+      </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script>
+        var weight=76.4,foot=5,inch=7,inchtofoot,total_foot,meter,bmi;
+        //bmi = weight/meter(2)
+        inchtofoot = inch/12
+//        document.write(inchtofoot)+'<br/>';
+        total_foot=foot+inchtofoot;
+        //document.write(total_foot);
+        meter=total_foot/3.281;
+        //document.write(meter);
+        bmi=weight/(meter*meter);
+        document.write(bmi);
+        if(bmi<18.5)
+        {
+            document.write("You are under weight");
+        }
+        else if(bmi>=18.5 && bmi<24.9)
+        {
+            document.write("You are normal weight");
+        }
+        else if(bmi>=24.9 && bmi<=29.9)
+        {
+            document.write("You are overweight");
+        }
+        else
+        {
+            document.write("you are obese");
+        }
+    </script>
+  </body>
+</html>
+<!-- 11) Write a javascript program to calculate income tax, gross income, net income from monthly income given by user 
+
+yearly income     tax rate
+<3,00,000         5%  
+
+>=3,00,000
+<5,00,000         10%  
+
+>=5,00,000
+<8,00,000         20%
+
+>=8,00,000        30%   -->
