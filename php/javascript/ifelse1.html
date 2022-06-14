@@ -18,32 +18,36 @@
     ></script>
   </head>
   <body>
-    <div class="container mt-5">
-      <div class="row mt-5">
-        <div class="col-8 offset-2 mt-5">
-          <h1 class="text-center">Keyboard sound</h1>
-          <div class="form-floating">
-            <textarea
-              class="form-control"
-              placeholder="Leave a comment here"
-              id="floatingTextarea2"
-              style="height: 100px"
-            ></textarea>
-            <label for="floatingTextarea2">Add text for sound</label>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">Javascript ifelse</h1>
         </div>
       </div>
     </div>
     <script src="jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-        console.log("it is ready to go");
-        $("textarea").keypress(function(){
-         // $(this).css("background-color","red");
-          var audio= new Audio('keypress.mp3');
-          audio.play();
-        });
-      });
+      var area1 = 300,
+        area2 = 200,
+        area3 = 300;
+      if (area1 == area2 && area2 == area3) {
+        document.write("all are same");
+      } else {
+        if (area1 > area2) {
+          //document.write("area 1 is greater");
+          if (area1 > area3) {
+            document.write("area 1 is greater than all");
+          } else {
+            document.write("area 3 is greater than all");
+          }
+        } else {
+          if (area2 > area3) {
+            document.write("area 2 is greater than all");
+          } else {
+            document.write("area 3 is greater than all");
+          }
+        }
+      }
     </script>
   </body>
 </html>
