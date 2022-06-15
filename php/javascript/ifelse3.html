@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star</title>
+    <title>Document</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -22,27 +18,31 @@
     ></script>
   </head>
   <body>
-    <h1>Star</h1>
     <div class="container">
       <div class="row">
-          <div class="col-12">
-              <div style="height:100px; width:500px; " id="div" >
-                  <i class= "fa-solid fa-star" id="star" style="margin-top: 45px; margin-left:235px;"></i>
-              </div>
-          </div>
+        <div class="col-12">
+          <h1 class="text-center">Javascript ifelse</h1>
+        </div>
       </div>
     </div>
     <script src="jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        console.log("it is ready to go");
-        $("#div").mouseenter(function () {
-            console.log("hiee");
-          $(this).animate({
-            'marginLeft' : "+=30px" //moves up
-            },1);
-        });
-      });
-    </script>
+   <script>
+        var month=4; date=26;
+        if((month==3 && date>=21) || (month==4 && date<=19))
+        {
+            //document.write("Your sign is aries");
+        }
+        else if((month==4 && date>=20) || (month==5 && date<=20))
+        {
+            //document.write("YOur sign is tarus");
+        }
+        var male_sign="tarus";
+        var female_sign="aires";
+        if(male_sign=="tarus" && female_sign=='aires')
+        {
+            document.write("you are critical");
+        }
+   </script>
   </body>
 </html>
+
