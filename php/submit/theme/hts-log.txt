@@ -1,0 +1,11 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 07 May 2022 15:22:19 at https://spark.bootlab.io/dashboard-default.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://spark.bootlab.io/dashboard-default.html -O1 "E:\httrack\home managment" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 16 seconds : 92 links scanned, 91 files written (10278647 bytes overall) [5372940 bytes received at 70696 bytes/sec], 6434343 bytes transferred using HTTP compression in 67 files, ratio 23%
+(No errors, 0 warnings, 0 messages)
