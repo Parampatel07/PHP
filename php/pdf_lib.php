@@ -5,18 +5,18 @@ require_once('../vendor/tecnickcom/tcpdf/examples/tcpdf_include.php');
 $author_name = $_POST['author_name'];
 $title = $_POST['title'];
 $text = $_POST['text'];
-$image = $_POST['image'];
+// $image = $_POST['image'];
 class MYPDF extends TCPDF {
 
     //Page header
     public function Header() {
         // Logo
-        $image_file = K_PATH_IMAGES.'logo_example.jpg';
-        $this->Image($image_file, 10, 10, 15, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+        // $image_file = K_PATH_IMAGES.'logo_example.jpg';
+        // $this->Image($image_file, 10, 10, 15, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
         // Set font
         $this->SetFont('helvetica', 'B', 20);
         // Title
-        $this->Cell(0, 15, '<< Pdf Generator >>', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+        // $this->Cell(0, 15, '<< Pdf Generator >>', 0, false, 'C', 0, '', 0, false, 'M', 'M');
     }
 
     // Page footer
@@ -69,24 +69,18 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
     require_once(dirname(__FILE__).'/lang/eng.php');
     $pdf->setLanguageArray($l);
 }
-
 // ---------------------------------------------------------
-
 // set font
 $pdf->SetFont('times', 'BI', 12);
-
 // add a page
 $pdf->AddPage();
-
 // set some text to print
 $txt = <<<EOD
 $title
 $author_name
 
 $text
-<img src="<?php $image ?>" alt="">
-?>
-<?php
+
 EOD;
 
 

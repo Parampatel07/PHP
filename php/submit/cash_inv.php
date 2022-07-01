@@ -16,14 +16,14 @@ require_once("inc2/header.php");
                 <div class="container-fluid">
                     <div class="header">
                         <h1 class="header-title">
-                        REIMBURSEMENT CLEAN FORMAT
+                        Cashless  FORMAT
                         </h1>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>REIMBURSEMENT CLEAN FORMAT</h1>
+                                    <h1>Cashless  FORMAT</h1>
                                 </div>
                                 <div class="card-body">
                                     <div class="my-5">

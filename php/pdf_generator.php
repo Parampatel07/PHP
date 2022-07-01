@@ -34,10 +34,10 @@
                                 <textarea class="form-control" name="text" placeholder="Leave a comment here"
                                     id="text"></textarea>
                             </div>
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <label for="image">Select image file</label>
                                 <input type="file" name="image" id="image">
-                            </div>
+                            </div> -->
                             <div class="mb-3 text-end">
                                 <input type="submit" class="btn btn-success" value="Create Pdf">
                             </div>

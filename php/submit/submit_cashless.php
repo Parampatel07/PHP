@@ -64,7 +64,7 @@ The case seems to be clean and hence recommend to process as per policy terms an
 ?>
 <textarea name="summary" class="form-control" id="" cols="30" rows="20"><?php  echo $summary ?></textarea>
 <div class="col-12 mt-4 text-end">
-<a href="inv.php" class="btn btn-danger">Back</a>
+<a href="cash_inv.php" class="btn btn-danger">Back</a>
 </div>
                                 </div>
                             </div>
