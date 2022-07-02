@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("asia/kolkata");
 define("FILENAME",$_SERVER['DOCUMENT_ROOT']."/php/project/inc/error.log");
-define("ISDEBUG",true);
+define("ISDEBUG",false);
 define("SERVER","localhost:3306");
 define("USERNAME","root");
 define("PASSWORD","");
@@ -21,11 +21,11 @@ function LogError(PDOException $error,$FileName='connection.php',$line=0) //user
        $_SESSION['error'] = $ErrorMessage;
     // exit();//terminate php script
 }
-$db20=null; //object
+$db=null; //object
 try
 {
-    $db20=new PDO("mysql:host=" . SERVER . ";dbname=" . DATABASE , USERNAME , PASSWORD );
-    $db20->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    $db=new PDO("mysql:host=" . SERVER . ";dbname=" . DATABASE , USERNAME , PASSWORD );
+    $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $error){
     LogError($error);//calling user defined functions
@@ -35,7 +35,7 @@ function RunQuery($sql,$data=null)
 {
     try 
     {
-        $statement = $GLOBALS['db20']->prepare($sql);
+        $statement = $GLOBALS['db']->prepare($sql);
         if($data==null)
             $statement->execute();
         else 
@@ -52,7 +52,7 @@ function FetchRow($sql,$data=null)
 {
     try 
     {
-        $statement = $GLOBALS['db20']->prepare($sql);
+        $statement = $GLOBALS['db']->prepare($sql);
         $statement->setFetchMode(PDO::FETCH_BOTH);
         if($data==null)
             $statement->execute();
