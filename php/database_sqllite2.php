@@ -1,4 +1,4 @@
-<!-- to run this page successfully uncomment line no.36 and line no.62 and change database name in connection file and line no.20 in this page -->
+<!-- to run this page successfully uncomment line no.36 and line no.62 -->
 <?php
 require_once("connection.php");
 $seconds = 0;
@@ -17,7 +17,7 @@ class MyDB extends SQLite3
 {
    function __construct()
    {
-      $this->open('XCOMP8.db');
+      $this->open('XCOMP7.db');
    }
 }
 $db20 = new MyDB();
@@ -26,6 +26,14 @@ if (!$db20) {
 } else {
    echo "Opened database successfully <br>";
 }
+$tab_query="SELECT TABLE_NAME 
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='param_school_7'";
+$tab_statement=$db->prepare($tab_query);
+$tab_statement->setfetchmode();
+$tab_statement->execute();
+$tab_name=$tab_statement->fetchall();
+var_dump($tab_name);
 $table="user";
 $sql = <<<EOF
    SELECT * from $table;
