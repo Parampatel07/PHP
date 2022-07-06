@@ -5,7 +5,7 @@ define("ISDEBUG",false);
 define("SERVER","localhost:3306");
 define("USERNAME","root");
 define("PASSWORD","");
-define("DATABASE","param_school_8");
+define("DATABASE","param_school_7");
 //used to store errors in error.log file of project/inc directory and also display error on screen if project is in developement stage 
 function LogError(PDOException $error,$FileName='connection.php',$line=0) //user defined functions
 {
