@@ -3413,3 +3413,19 @@ BHAVNAGAR', 'BHAVNA' at line 1 on occured at Fri01-07-202207:08:05PM in file E:\
  Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GATHA'
 BHAVNAGAR-364001
 ', 'BHAVNAGAR', '9376576852', '9376903610', '846088482' at line 3 on occured at Fri01-07-202207:08:07PM in file E:\wamp64\www\php\php\database_sqllite.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:34:01AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:34:49AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:39:36AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:39:57AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:40:20AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:41:13AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:43:20AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:44:37AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:46:10AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:48:04AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:48:34AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:49:10AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:49:37AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:51:31AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:52:03AM in file connection.php at lineno 0
+ Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:52:23AM in file connection.php at lineno 0

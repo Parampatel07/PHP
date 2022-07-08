@@ -23,39 +23,44 @@
                 <div class="card shadow mt-5">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-3">
-                                <label for="name" class="form-label"> Enter your name </label>
-                                <input type="text" name="name" id="name" class="form-control"
-                                    placeholder="Enter your name " />
-                            </div>
-                            <div class="col-3">
-                                <label for="" class="form-label"> Enter your class </label>
-                                <input type="text" name="class" id="class" class="form-control"
-                                    placeholder="Enter your class" />
-                            </div>
-                            <div class="col-2">
-                                <label for="" class="form-label">Enter your marks</label>
-                                <input type="number" name="marks" id="marks" class="form-control"
-                                    placeholder="Enter your marks" />
-                            </div>
-                            <div class="col-2 ">
-                                <label for="" class="form-label">Select your Gender</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="male" value="1" />
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Male
-                                    </label>
+                            <form action=" " method="post" class="row" id="myform">
+                                <div class="col-3">
+                                    <label for="name" class="form-label"> Enter your name </label>
+                                    <input type="text" name="name" id="name" class="form-control"
+                                        placeholder="Enter your name " />
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="female" value="0" />
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        Female
-                                    </label>
+                                <div class="col-3">
+                                    <label for="" class="form-label"> Enter your class </label>
+                                    <input type="text" name="class" id="class" class="form-control"
+                                        placeholder="Enter your class" />
                                 </div>
-                            </div>
-                            <div class="col-2 mt-4">
-                                <button type="button" id="btnadd" class="btn btn-primary ">Add student</button>
-                            </div>
+                                <div class="col-2">
+                                    <label for="" class="form-label">Enter your marks</label>
+                                    <input type="number" name="marks" id="marks" class="form-control"
+                                        placeholder="Enter your marks" />
+                                </div>
+                                <div class="col-2 ">
+                                    <label for="" class="form-label">Select your Gender</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="male"
+                                            value="1" />
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Male
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="female"
+                                            value="0" />
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Female
+                                        </label>
+                                        <input type="hidden" name="studentid" id="studentid">
+                                    </div>
+                                </div>
+                                <div class="col-2 mt-4">
+                                    <button type="button" id="btnadd" class="btn btn-primary ">Add student</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -94,6 +99,13 @@
                 $button_lab = $("#btnadd").html();
                 if ($button_lab == "Update students") {
                     //$(r_upd).find("td").eq(3).val(name);
+                    var p_address = "ajax/insert_student.php"
+                    $.ajax({
+                        url: p_address
+                    }).done(function (data) {
+
+                        
+                    });
                     console.log(r_upd);
                     console.log("update button");
                     var name = $("#name").val();
@@ -114,32 +126,40 @@
                     $("#btnadd").removeClass("bg-warning").addClass("bg-primary").html("Add students");
                 }
                 else {
-                    var name = $("#name").val();
-                    var clas = $("#class").val();
-                    var marks = $("#marks").val();
-                    $radio = $("input[name='gender']:checked").val();
-                    if ($radio == '1') {
-                        rad_output = "Male";
-                    }
-                    else {
-                        rad_output = "Female";
-                    }
-                    var data = ` <tr>
-                      <td>${count}</td>
-                      <td>${name}</td>
-                      <td>${clas}</td>
-                      <td>${marks}</td>
-                      <td>${rad_output}</td>
-                      <td><i class='fas fa-edit edit' style='cursor:pointer'></i></td>
-                      <td><i class='fas fa-trash delete' style='cursor:pointer'></i></td>
-                  </tr>`;
-                    $("#output").append(data)
-                    count++;
+                    var address = "ajax/insert_student.php";
+                    $.post(address, $("#myform").serialize(), function (data, status) {
+                        console.log(data);
+                        console.log(status);
+                        var studentid = data;
+                        console.log(studentid)
+                        var name = $("#name").val();
+                        var clas = $("#class").val();
+                        var marks = $("#marks").val();
+                        $radio = $("input[name='gender']:checked").val();
+                        if ($radio == '1') {
+                            rad_output = "Male";
+                        }
+                        else {
+                            rad_output = "Female";
+                        }
+                        var data = ` <tr>
+                            <td>${count}</td>
+                            <td>${name}</td>
+                            <td>${clas}</td>
+                            <td>${marks}</td>
+                            <td>${rad_output}</td>
+                            <td><i class='fas fa-edit edit' id='${studentid}' style='cursor:pointer'></i></td>
+                            <td><i class='fas fa-trash delete' style='cursor:pointer'></i></td>
+                        </tr>`;
+                        $("#output").append(data)
+                        count++;
+                    });
                 }
             });
             $("body").on("click", ".delete", function () {
                 $(this).parent().parent().addClass("bg-danger").fadeOut("slow");
             });
+
             $("body").on("click", ".edit", function () {
                 r_upd = $(this).parent().parent();
                 console.log(r_upd);
