@@ -3429,3 +3429,14 @@ BHAVNAGAR-364001
  Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:51:31AM in file connection.php at lineno 0
  Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:52:03AM in file connection.php at lineno 0
  Error Code1049 ErrorDetail Unknown database ' param_sample_1' on occured at Wed06-07-202210:52:23AM in file connection.php at lineno 0
+ Error Code23000 ErrorDetail Column 'name' cannot be null on occured at Fri08-07-202209:09:59AM in file E:\wamp64\www\php\php\jquery\ajax\insert_student.php at lineno 0
+ Error Code23000 ErrorDetail Column 'name' cannot be null on occured at Fri08-07-202209:10:40AM in file E:\wamp64\www\php\php\jquery\ajax\insert_student.php at lineno 0
+ Error Code23000 ErrorDetail Column 'name' cannot be null on occured at Fri08-07-202209:12:04AM in file E:\wamp64\www\php\php\jquery\ajax\insert_student.php at lineno 0
+ Error Code23000 ErrorDetail Column 'name' cannot be null on occured at Fri08-07-202210:48:46AM in file E:\wamp64\www\php\php\jquery\ajax\insert_student.php at lineno 0
+ Error Code23000 ErrorDetail Column 'name' cannot be null on occured at Fri08-07-202210:52:21AM in file E:\wamp64\www\php\php\jquery\ajax\insert_student.php at lineno 0
+ Error Code23000 ErrorDetail Column 'name' cannot be null on occured at Fri08-07-202210:54:23AM in file E:\wamp64\www\php\php\jquery\ajax\insert_student.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@gmail.com' at line 1 on occured at Fri22-07-202205:25:03PM in file E:\wamp64\www\php\project\admin\submit\opertor_login2.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@gmail.com' at line 1 on occured at Fri22-07-202205:25:05PM in file E:\wamp64\www\php\project\admin\submit\opertor_login2.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@gmail.com' at line 1 on occured at Fri22-07-202205:25:09PM in file E:\wamp64\www\php\project\admin\submit\opertor_login2.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@gmail.com' at line 1 on occured at Fri22-07-202205:25:33PM in file E:\wamp64\www\php\project\admin\submit\opertor_login2.php at lineno 0
+ Error Code42000 ErrorDetail You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@gmail.com' at line 1 on occured at Fri22-07-202205:25:35PM in file E:\wamp64\www\php\project\admin\submit\opertor_login2.php at lineno 0

@@ -100,38 +100,10 @@
                 if ($button_lab == "Update students") {
                     //$(r_upd).find("td").eq(3).val(name);
                     var p_address = "ajax/insert_student.php"
-                    $.ajax({
-                        url: p_address
-                    }).done(function (data) {
+                    $.post(p_address,$("#myform").serialize(),function (data) {
 
-                        
-                    });
-                    console.log(r_upd);
-                    console.log("update button");
-                    var name = $("#name").val();
-                    var clas = $("#class").val();
-                    var marks = $("#marks").val();
-                    $radio = $("input[name='gender']:checked").val();
-                    if ($radio == '1') {
-                        rad_output = "Male";
-                    }
-                    else {
-                        rad_output = "Female";
-                    }
-                    console.log("name = " + name + " class = " + clas + " marks = " + marks + " gender = " + rad_output);
-                    $(r_upd).find("td").eq(1).html(name);
-                    $(r_upd).find("td").eq(2).html(clas);
-                    $(r_upd).find("td").eq(3).html(marks);
-                    $(r_upd).find("td").eq(4).html(rad_output);
-                    $("#btnadd").removeClass("bg-warning").addClass("bg-primary").html("Add students");
-                }
-                else {
-                    var address = "ajax/insert_student.php";
-                    $.post(address, $("#myform").serialize(), function (data, status) {
                         console.log(data);
-                        console.log(status);
-                        var studentid = data;
-                        console.log(studentid)
+                        //console.log("update button");
                         var name = $("#name").val();
                         var clas = $("#class").val();
                         var marks = $("#marks").val();
@@ -142,17 +114,45 @@
                         else {
                             rad_output = "Female";
                         }
-                        var data = ` <tr>
-                            <td>${count}</td>
+                        //console.log("name = " + name + " class = " + clas + " marks = " + marks + " gender = " + rad_output);
+                        $(r_upd).find("td").eq(1).html(name);
+                        $(r_upd).find("td").eq(2).html(clas);
+                        $(r_upd).find("td").eq(3).html(marks);
+                        $(r_upd).find("td").eq(4).html(rad_output);
+                        $("#btnadd").removeClass("bg-warning").addClass("bg-primary").html("Add students");
+                        $("#studentid").val("");
+                    });
+                }
+                else {
+                    var address = "ajax/insert_student.php";
+                    $.post(address, $("#myform").serialize(), function (data, status) {
+                        var i_studentid = data;
+                        console.log(i_studentid);
+                        $("#studentid").val(i_studentid);
+                        var name = $("#name").val();
+                        var clas = $("#class").val();
+                        var marks = $("#marks").val();
+                        //  $("#studentid").html(studentid);
+                        $radio = $("input[name='gender']:checked").val();
+                        if ($radio == '1') {
+                            rad_output = "Male";
+                        }
+                        else {
+                            rad_output = "Female";
+                        }
+                        var data1 = ` <tr>
+                            <td id='${i_studentid}'>${count}</td>
                             <td>${name}</td>
                             <td>${clas}</td>
                             <td>${marks}</td>
                             <td>${rad_output}</td>
-                            <td><i class='fas fa-edit edit' id='${studentid}' style='cursor:pointer'></i></td>
+                            <td><i class='fas fa-edit edit' id='${i_studentid}' style='cursor:pointer'></i></td>
                             <td><i class='fas fa-trash delete' style='cursor:pointer'></i></td>
                         </tr>`;
-                        $("#output").append(data)
+                        $("#output").append(data1)
                         count++;
+                        var param = $("#studentid").val()
+                        console.log(param);
                     });
                 }
             });
@@ -161,8 +161,10 @@
             });
 
             $("body").on("click", ".edit", function () {
+                var edit_studentid=$(this).attr("id")
+                console.log(edit_studentid);
                 r_upd = $(this).parent().parent();
-                console.log(r_upd);
+                //console.log(r_upd);
                 var td_output = $(this).parent().parent();
                 //console.log(td_output);
                 var name = $(td_output).find("td").eq(1).html();
