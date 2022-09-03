@@ -69,7 +69,7 @@
 
 			// Additional headers
 			$headers[] = 'To: $receiver';
-			$headers[] = 'From: info@theeasylearnacademy.com';
+			$headers[] = 'From: info@highspin.in';
 			/* $headers[] = 'Cc: birthdayarchive@example.com';
 			$headers[] = 'Bcc: birthdaycheck@example.com'; */
 

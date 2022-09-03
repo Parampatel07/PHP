@@ -157,7 +157,7 @@ require_once("inc2/header.php");
                                                 </div>
                                                 
                                                 <div class="mt-2 text-end">
-                                                    <input type="submit" name="submit" class="btn btn-primary"
+                                                    <input type="submit" name="submit" id="submit" class="btn btn-primary"
                                                         value="Save category">
                                                 </div>
                                             </div>
