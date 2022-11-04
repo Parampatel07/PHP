@@ -2,6 +2,7 @@
     "require": {
         "rakit/validation": "^1.4",
         "fzaninotto/faker": "^1.9",
-        "tecnickcom/tcpdf": "^6.4"
+        "tecnickcom/tcpdf": "^6.4",
+        "shuchkin/simplexlsx": "^1.0"
     }
 }
