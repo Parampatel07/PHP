@@ -1,0 +1,64 @@
+admin 
+-------
+user
+password
+isdeleted
+
+info table---
+fir number	
+intimation number
+type(cashLess/remb)
+presenting complain
+current condition	
+mode of treatment 	
+addmision date	- varchar 
+discharge date	- varchar 
+room	
+hospital amount	
+    hospital person name 	
+    hospital number	
+    treating doctor	
+    hospital name 	
+    qualification	
+    reg number	
+patient name 	
+patient number 	
+beds	
+mode of payment 	
+investigation date		- default (but editable)
+los	
+summary	
+status  1-done,2-pending,3-not picked
+remaks - only if it is pending (reason)
+isdetailed 1-no(default),2-yes
+
+to do 
+---------
+title
+time 
+description
+
+1] Cases
+insert 
+->insert should easy and fast as per the order given 
+
+update
+-->cases can be updated at any time 
+
+view -ALL THE VIEW SHOULD HAVE CREATE EXCEL OPTION COMPULSORY
+--> case should be view as per requirement 
+    1.] intimation view
+    2.] fir view
+    3.] date wise view
+    4.]pending view
+    5.] done view
+
+-> should generate daily telephonic daily sheet automatically on the basis of total case of that days
+
+->reminder for attendance
+
+->to do list 
+
+-> datatable which can create excel sheet (most important)
+
+-> should also have a option to add new module at any point - (with database)
