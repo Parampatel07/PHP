@@ -3,7 +3,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
     <?php require_once("inc/menu.php")?>
-    <!-- Modal -->
+    <!-- Modal this is edit  -->
     <!-- end modal -->
     <div class="overflow-hidden-x">
         <!-- Start Home -->
